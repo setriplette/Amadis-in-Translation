@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../out/amadis_odd.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../out/amadis_odd.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../Amadis_RomanNumeralTester.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Amadís de Gaula Volumes I-IV</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+
+                <p> We have used the text of the <bibl>1547 <title>Amadís</title> (Sevilla: Jacopo
+                        Cromberberger)</bibl> from which Southey translated. Images of the 1547 are
+                    from the Biblioteca Virtual de Andalucía. This text is very similar to the text
+                    of the first extant <bibl>
+                        <title>Amadís</title>, the 1508 Jorge Coci edition</bibl>, upon which most
+                    modern editions are based. Garci Rodríguez de Montalvo, a regidor or civic
+                    official of the city of Medina del Campo, edited and compiled the version of
+                    Amadís we know today from one or more medieval originals. The medieval material
+                    is concentrated in Books I-III, with occasional asides from the author. Book IV
+                    and the prologues are original to Montalvo. Only one fragment of a medieval
+                    Amadís exists, but the first texts are thought to be based in part on the
+                    Lancelot material in France and likely appeared in Spain in the mid-fourteenth
+                    century. Evidence in the form of character names and references in poetry dates
+                    to the fourteenth century. The primitive or medieval Amadís is now thought to be
+                    Castilian and not Portuguese or French. The attribution to Portuguese knight
+                    Vasco de Lobeira is now known to be apocryphal.<ptr
+                        target=" http://www.bibliotecavirtualdeandalucia.es/catalogo/catalogo_imagenes/imagen_id.cmd?idImagen=5010234"
+                    />
+                </p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>This digital critical edition seeks to reproduce the reading experience of the
+                        <bibl>1547 <title>Amadís de Gaula</title> (Sevilla: Cromberger)</bibl> with
+                    which Robert Southey worked for his translation in order to facilitate
+                    comparisons. The following modifications have been made to the 1547 print
+                    edition. <list rend="numbered">
+                        <item>We employ the letters <hi>i/e/u/y/j</hi> as in modern Spanish: i/e/u
+                            express vowel sounds and <hi>y/j</hi> express consonants. For example,
+                                <mentioned>reyna</mentioned> in the 1547 has been transcribed as
+                                <mentioned>reina</mentioned> and <mentioned>cauallero</mentioned> as
+                                <mentioned>cavallero</mentioned>. The letter <hi>y</hi> has vocalic
+                            value only at the ends of words, as in <mentioned>muy</mentioned> and
+                                <mentioned>rey</mentioned>, and as the conjunction meaning
+                                <gloss>and</gloss>.</item>
+                        <item>We preserve most of the consonant use of the 1547, including the
+                            alternation of <hi>b/v</hi> and <hi>m/n</hi> before <hi>b/p</hi> as well
+                            as the absence or presence of <hi>h</hi>. We normalize the use of
+                                <hi>qu</hi>.</item>
+                        <item>Doubled consonants, <hi>bb</hi>, <hi>cc</hi>, <hi>ff</hi>, etc. are
+                            resolved as single except where they have phonetic value.</item>
+                        <item>The single <hi>r</hi> and not <hi>rr</hi> has been transcribed after
+                            consonants: <mentioned>honrra</mentioned> becomes
+                                <mentioned>honra</mentioned>. In some cases the <hi>rr</hi> has been
+                            supplied for <hi>r</hi> for phonetic reasons:
+                                <mentioned>tiera</mentioned> becomes
+                            <mentioned>tierra</mentioned>.</item>
+                        <item>We resolve the few abbreviations in the 1547 without alerting the
+                            reader. For example, <mentioned>q̃</mentioned> has been resolved as
+                                <mentioned>que</mentioned> and <mentioned>scta</mentioned> as
+                                <mentioned>sancta</mentioned>. Any ambiguities in abbreviations are
+                            tagged.</item>
+                        <item>We transcribe the tironian sign as <mentioned>y</mentioned>.</item>
+                        <item>We use accentuation according to the norms of modern Spanish in order
+                            to guide the reader’s pronunciation and to disambiguate words.</item>
+                        <item>We use capital and lower-case letters as in modern Spanish in order to
+                            clearly mark proper names and the boundaries of sentence-like
+                            groups.</item>
+                        <item>We normalize the union and separation of words according to modern
+                            Spanish usage.</item>
+                        <item>We preserve the punctuation of the 1547 in order to facilitate
+                            clause-by-clause comparisons with Southey’s translation. We preserve the
+                            1547’s clause-like units (the space between successive punctuation
+                            marks) even though we recognize significant differences from modern
+                            usage. The 1547 uses <hi>. : /</hi> and infrequent <hi>?</hi> as
+                            punctuation, and while sentence-like groups end with a period, the
+                            period <hi>.</hi> is also used within sentence-like groups to introduce
+                            dialogue. The punctuation marks <hi>:</hi> and <hi>/</hi> appear to
+                            freely alternate. We reproduce <hi>. : /</hi> as they appear in the 1547
+                            without modernization. We have not added modern <hi>¿?</hi> to mark
+                            questions. We do not mark dialogue with em dash; rather, for this
+                            digital edition, dialogue, including questions, has been coded in the
+                            milestone element. We do not preserve the <hi>//</hi> that indicates
+                            line breaks in the middle of words. Our goal in these punctuation
+                            decisions is to render structural elements of the text at the sentence
+                            and clause level as Southey would have confronted them in order to
+                            elucidate whether the 1547 structure and punctuation influenced Southey
+                            in his own construction of sentences and clauses, which we observe
+                            differs from standard English use.</item>
+                        <item>Obvious printer errors have been tagged with the sic element.
+                            Corrections are provided based on <bibl>Juan Manuel Cacho Blecua’s
+                                critical edition (Madrid: Cátedra, 1999)</bibl>, which takes into
+                            consideration multiple sixteenth-century editions of <title>Amadís de
+                                Gaula</title> including the <bibl>Sevilla 1526</bibl> on which the
+                                <bibl>Sevilla 1547</bibl> is based.</item>
+                    </list>
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="chapter" xml:id="M34">
+                <!--2017-05-05 ebb: This should fire a Schematron error only in this file! Don't worry about it. The file name of our "template" file isn't going to contain a chapter number! But make sure your REAL file name matches ours. -->
+                <head>Capítulo XXVII <locus from="xlii-r" to="xlv-r"/>
+                </head>
+                <argument>
+                    <p> En que se demuestra la perdición del rey Lisuarte/ y de todos sus
+                        acaecimientos a causa de sus promessas que eran ilicitas. </p>
+                </argument>
+                <p> Estando el rey Lisuarte/ y la riena Brisena su mujer en sus teindas con muchos
+                    cavalleros y dueñass y donzellas: al cuarto día que de allí partieran Amadís y
+                    don Galaor su hermano: entró por la puerta el cavallero que el manto y la corona
+                    le exara com ya oístes: y fincando los inojos ante el rey le dixo. Señor como no
+                    tenéis la hermosa corona que yo vos dexe y vos señora el rico manto: el rey se
+                    calló ninguna respuesta le quiso dar: y el cavallo dixo. Mucho me plaze que os
+                    no pagastes della: pues que me quitarán de perder la cabeza o el don que por
+                    ello me aviades a dar: y pues assí es mandadme lo dar qu no me puedo detneren
+                    ninguna guisa. Cuando esto oyo pesóle fuertemente: y dixo. Cavallero el manto ni
+                    la corona no os lo puedo dar que lo he todo perdido: y mas me pesa por vos que
+                    tanto os hazia menester que por mi aunque mucho valía. Ay captiuvo muertoso dixo
+                    el cavallero: y començo a hazer un duelo tan grande que maravilla era diziendo:
+                    cativo de mi sin ventura muerto soy de la peor muerte que nunca murió cavallero/
+                    que la tan poco meresciesse y cayanle las lágrimas por las brabas que eran
+                    blancas como la lana blanca: el Rey uvo del gran piedad: y díxole. Cavallero no
+                    temáis de vuestra cabeça: que toda cosa que yo aya vos la auréis para la
+                    guarescer: que assí os lo he prometido: y assí lo terne. El cavallero se le dexó
+                    caer a sus pies paraselos besar más el rey lo alço por la mano y dixo. Agora
+                    pedid que os plazera. Señor dixo él: verdad es que me ovistes o dar mi mano y mi
+                    corona o lo que por ello vos pidiesse. E dios sabe señor que mi pesnamiento no
+                    era demandar lo que agora pedire: y si otra cosa pra mi remedio en el mundo
+                    vuiesse no os enojara en ello: mas no puedo aí al hazer: mas bien se que vos
+                    será muy grave de dar mas tan grave sería que tal hombre como vos fallesciesse
+                    de su lealtad/ a vos pesara de me lo dar y a mi de lo rescebir. Agora deamnada
+                    dixo el rey que tan cara cosa será que yo a´â/ que la vos no aíades: muchas
+                    mercedes dixo el cavallero: mas es menester que hagáis assegurr de cuantos agora
+                    son en vuestra corte/ que me no harán tuerto ni fuerça sobre mi don/ y por vos
+                    mismo me asseguraréis/ que de otra guisa ni vuestra verdad ser´â guardada ni yo
+                    ser´â satisfecho si por una parte se me diesse y por otra me lo quitassen. Razón
+                    es dixo el rey lo que pedis: y assí lo otorgó: y mando lo pregonar. Entonces el
+                    cavallero dixo. Señor yo no podría ser quito de muerte sino por mi corona/ y mi
+                    manto o por vuestra hija Oriana/ y agora me dad dello lo que quisierdes que yo
+                    mas querr´â lo que os dí. Ay cavallero dixo el rey: mucho me avéis pedido. Y
+                    todos overon muy gran pesar que mas ser no podía: pero el rey que era él mas
+                    leal del mundo dixo. Ao vos pese: que mas coviene la perdida de mi hija que
+                    faltar de mi palabra: porque lo uno daña a pocos y lo otro al general: donde
+                    redundar´â mayor peligro: porque las gentes no siendo seguras de la verdad de
+                    sus señores/ muy mal entrellas el verdadero amor se podr´â conservar: pues donde
+                    este no aí no puede aver cosa que mucho por tenga. Y mando que luego le
+                    traxessen allí su hija. Cuando la reina las dueñas y donzella esto oyeron
+                    començaron a hazer el mayor duelo del mundo: mas el rey las mandó acoger a sus
+                    camaras: y mand´a todos los suyos que no llorassen so pena de perder su amor
+                    diziendo agora averna de mi hija lo que dios tuviere por bien mas la mi verdad
+                    será a mi saber falsada. En esto llegó la muy hermosa Oriana ante el rey como
+                    atonita: y cayéndole a los pies le dixo. Padre señor que es esto que queréis
+                    hazer: fagolo dixo el rey por n quebrar ni palabra: y dixo contra el cavallero.
+                    Véis aquí el don que pedistes queréis que vaya con ella otra compaña: señor dixo
+                    el cavallero/ no traigo conmigo sino dos cavalleros y dos escuderos aquellos con
+                    que vine a vos Vindilisora y otra compaña no puedo llevar: mas y o vos digo que
+                    no ha de que temer hasta que la yo ponga en la mano de aquel a quien la he
+                    dedar. Vaya con ella una donzella dixo el rey si quiserdes porque mas honrra y
+                    bonestidad sea y no vaya entre vos sola/ el cavallero lo otorgó. Cuando Oriana
+                    esto oy´ cayó amortecida: mas esto no uvo menester que el cavallero la tomo
+                    entre sus braços: y llorando que parecía hazerlo contra su voluntad: y dio la a
+                    un escudero que estava en un rocín muy grande y mucho andado: y poniendola en la
+                    silla se puso en el en las ancas/ y dixo el cavallero tenedla no caya que va
+                    tollida: y dios sabe que en toda esta corte no ha cavallero que mas pese que a
+                    mi deste hecho/ y el rey hizo venir la donzella de denamarcha/ y mandó la poner
+                    en un palafren y dixo: id con vuestra señora y no la dexéis por mal ni por bien
+                    que vos avenga en cuano con ella os dexaren. Ay cativa dixo ella nunca su y
+                    dehazer tal ida: y luego muverion ante el rey: y el gran cavallero y muy
+                    membrudo que en vinilisora no quiso tirar el yelmo tomó a Oriana por la rienda:
+                    y sabed que este era ar calaus el encantador: y al salir del corral sosprió
+                    Oriana muy fuertemente/ como si el coraçón se le partiesse: y dixo assí como
+                    tollida. Aí buen amigo en fuerte punto se otorgó el don: que por esto somos vos
+                    y yo muertos. Esto dezía Amadís que le otorgara la ida con la donzella: y los
+                    otros cuidaron que por ella y por su padre lo dixera: mas lo que la llevavan
+                    entraron luego en la floresta: andando con ella a gran priessa hasta que dexaron
+                    aquel camino/ y entraron en un hondo valle. El rey cavalgó en su cavallo: y un
+                    palo en la mano guardando que ninguno los contrallasse/ pues que él le avía
+                    assegurado: mabilia que a unas siniestras estava haziendo muy grande duelo vio
+                    cerca del muro passar ardian el enano de Amadís: que iva en un gran rocín y
+                    ligero: llamo lo con gran cuita que tenía:y dixo. Ardian amigo si amas a tu
+                    señor no huelgues d´â ni noche hasta que lo halles: y le cuentes esta mala
+                    ventura que aquel es hecha: y sino lo hazes serleías traidor: que es cierto que
+                    él lo querría agora mas saber que aver esta ciudad por suya. Para sancta María
+                    dixo el enano él lo sabrá lo mas aína que ser pudiere: y dando del açote al
+                    rocín/ se fue por el camino que viera ir a su señor a mas andar. Mas agora os
+                    contarémos lo que a eseta razón acontesció al rey cuando assí él estava a la
+                    entrada de la floresta como oístes: haziendo tornar todos los cavalleros que
+                    allá salîan: teniendo consigo veinte cavalleros: vio venir la donzella a que en
+                    él avía el done prometido: dixziendo que le provasse: y que sabría mas del
+                    esfuerço de su coraçón: y venía en un palafren que andava aína: y traia a su
+                    cuello una espada muy bien guarnida y una saca con un hierro muy hermoso/ y la
+                    asta pintada: y llegando al rey le dixo. Señor dios vos alve y de alegría y
+                    coraçón que me atengáis lo que me promistes en vinilisora ante vuestros
+                    cavalleros. Donzella dio el rey yo av´â mas menester alegría de la que tengo:
+                    mas como quier que este bien me miembra lo que os dize y assí lo conplire. Señor
+                    dixo ella/ con essa esperança vengo yo a vos como al mas leal rey del mundo y
+                    agora me vengad de un cavallero que va por esta floresta: que matóa mi padre al
+                    mayor aleve del mundo: y forço me a mi: y encantele de tal guisa que no puede
+                    morir si él mas honrrado hombre dle reino de Londres no le da un golpe con esta
+                    lança y otro con esta espada: y la espada diera él a guardar a una su amiga
+                    cuidando que lo mucho amava: pero no era assí que muy mortalmente lo desmava: y
+                    diome la a mi y la lança/ para con que me vengasse del: y yo se que si por
+                    vuestra mano no: que él mas honrado sois: por otro no pude ser muerto: y si la
+                    vengança vos atrevierdes hazer: avedes de ir solo: porque yo le prometí de le
+                    dar oí un cavallero con que se combatiesse/ ya esta cuasa allí venido cuidando
+                    que la espada y la lança no la podr´â yo aver: y es tal pelito entrenos que si
+                    él venciere que le poerdone ni quexa: y si fuere vencido que haga del mi
+                    voluntad. En el bombre de dios dixo el rey. Yo quiero ir con vos y mandó traer
+                    sus armas y armóse aína: y cauvalgó en su cavallo que el mucho preciava: y la
+                    donzella le dixo que cienesse la espada que ella traía: y fuesse con ella
+                    defendndo a todos que ninguno fuesse tan osado que tras él pensasse de ir. Y
+                    assí anduvieron un rato por la carrera/ mas parte cerca de unos árboles que
+                    estavan donde entranán los que llevavan a Oriana: y allí vio estar el rey un
+                    cavalero todo armado sobre un cavallo negro/ y al cuello un escudo vrde: el
+                    yelmo otro tal. La donzella dixo señor tomad vuestro yelmo: que vedes allí el
+                    cavllero que vos dixe: él lo enlazó luego: tomando la lança dixo. Cavallero
+                    sobervio y de mal talante agora os aguardad: y abaxando la lança y el cavallero
+                    la suya se dexaron correr contra si cuanto los cavallos los podían llevar: y
+                    hiriendonse dellas lanças en los escudos assí que luego fueron quebradas: y la
+                    del rey quebró tan ligero que solo no la sinitó en la mano: y cuido que
+                    fallesciera de su golpe/ y puso mano a la esapda/ y el cvallero a la suya: y
+                    hirieronse por cima delos ylemos/ y la espada del cavallero entró bien la media
+                    por el elmo del rey: mas la del rey quebró luego por cabe la mançana: y cayo el
+                    hierro en el suelo: entonces conosció que era traición: y el cavallero le
+                    començó a dar golpes por todas partes a éel y al cavallo. Y cuando el rey vio
+                    que el cavallo le matava/ fuesse a abraçar con él: el otro assí mismo con el y
+                    tiraron por si tan fuerte que cayeron en tierra: y el cavalllero cayó debaxo: y
+                    el Rey tomó la espada que el otro perdiera de la mano/ y començole a dar con
+                    ella los mayores golpes que podía. La donzella que esto vido dio grandes bozes
+                    diziendo. Ay Arcalaus acorre que muchos tardas/ y dexas morir a tu cormano
+                    cuando el rey assí estava por matar el cavallero/ oyo un gran esetruendo: bolvió
+                    la cabeça/ vio diez cavalleros que contra el veníân corriendo: y uno ven´â
+                    delante diziendo a grandes bozes: rey Lisuarte muerto eres que nunca un día
+                    reinarás: ni tomaras corona en la cabeça. Cuando esto oyó el rey fue muy
+                    espantado: y temióse de ser muerto: y dixo con gran esfuerço que siempre tuvo y
+                    tenía bien puede ser que moriré: pues tanta ventja me tenéis: mas todos moriréis
+                    por mi como traidores y flasos que sois. Y llegando aquel cavallero al mas
+                    correr de su cavallo dio al rey de toda su fuerça una tal lançada en el escudo/
+                    que sin detenencía ninguna de mas poder sevaler/ le puso las manos en tierra.
+                    Mas luego fue levantado como aquel que se quería amparar hasta la muerte/ que
+                    muy cercana a si la tenía/ y diole tan cruel golpe de la espada en la pierna del
+                    cavallo gela cortó toda: y el cavallero cayóso el cavallo/ luego dieron todos
+                    sobre él/ y él se defendía bravamente/ mas defensa no tuvo aí menester: que el
+                    fue mal parado dellos pechos de los cavallos: y los dos cavalleros que eran a
+                    pie abraçaronse con él: y sacaronle la espada de las manos: despues tiraron le
+                    el escudo del cuello: y el yelmo dela cabeça: y ehcaronle una gruessa cadena a
+                    la garganta en que avía dos ramales: y hizieronle cavalgar en un palafrén: y
+                    tomandole sendos cavalerso por las ramales començaronse de ir con él: y llegando
+                    entre los árboles en un valle hallaron a Arcalaus que tenía a Oriana y a la
+                    donzella de Denamarcha: y el cavallero que iva ante el rey dixo. Cormano vedes
+                    aquí el rey Lisuarte: cierto dixo el buena venida fue está: y yo haré que nunca
+                    del tema ni dellos de su casa. Aí traidor dixo el rey bien se yo que harías tu
+                    toda traici´n esso te haría yo conoscer aunque yo mal llagado si te agora
+                    conmigo quissiesses combatir/ cierto dixo Aralaus por vencer tal cavallero como
+                    vos no me preciara yo mas. Assí estuverion todos de consuno por aquella carrera
+                    que se partía en dos lugares: y Arcalaus llamó a un su donzel: y díxole. Vete a
+                    londres quanto pudieres y di a Barsinan que se trabajé de ser rey/ que yo le
+                    ternelo que le dixe: que todo es ya a punto: el donzel se fue luego/ y Arcalaus
+                    dixo a su compaña. Ir vos a daganel con diez cavalleros destos y llevad a
+                    Lisuarte y meted lo en la mi carcel/ y yo llevaré a Oriana con estos quatro: y
+                    mostrar le he donde tengo mis libros y mis cosas e monte aldín. Este esra delos
+                    mas fuertes castillos del mundo: pues allí fueron paratidos los diez cavalleros
+                    con el rey: y los cinco con Oriana: en que iva Arcalaus dando aentender que su
+                    persona val´â tanto como cinco cavalleros. Que diremos aqu´ˆenperadores: reyes:
+                    y grandes que en los altos estados sois puestos: este rey Lisuarte en un d´â con
+                    su grandeza el mundo pensava señorear: y en este mismo día perdida la hija
+                    sucessora de sus reinos. El preso/ deshonrrado/ encadenado en poder de un
+                    encantador malo cruel se vio/ sin darse remedio. Guardaos guardaos: tened
+                    consocimiento de dios que aunque los grandes y altos estados da/ quiere que la
+                    voluntad y el coraçón muy humildes y baxos sean: y no en tanto tenidos que las
+                    gracias: los servicios que él merescesean olvido puestos sino aquello con que
+                    sostener los penséis: que es la gran sobervía/ la demasidad cobdicia/ aquello
+                    que es el cotrario de lo que él quiere vos lo hará perder con semejante
+                    deshonrra: y sobre todo considerdad los sus sercretos y grandes juizicos: que
+                    seyendo este rey Lisuarte tan justo/ tan franco: tan gracisos permitió serle
+                    venido tan cruel reves/ que hará contra aquellos que todo esto al cotrario
+                    tienen: sabéis que assí como su voluntad fue que deste cruel peligro mi
+                    lagrosamente se remediasse: acatando merescer algo dello las sus buenas obras:
+                    assí a los que las no hazen: ni ponen mesura en sus maldades: en este mundo los
+                    cuerpos: y en el otro las animas serán perdidos y dañados. Pues ya él muy
+                    poderoso señor contento en aver dado tan duro açote a este rey: ueriendo
+                    mostrar/ que assí para abxar lo alto y lo alçar sus fuerças bastan: puso en ello
+                    el remedio que agora oíréis.</p>
+            </div>
+        </body>
+    </text>
+</TEI>
