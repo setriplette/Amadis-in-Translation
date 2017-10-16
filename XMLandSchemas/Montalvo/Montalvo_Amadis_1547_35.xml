@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../out/amadis_odd.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../out/amadis_odd.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../Amadis_RomanNumeralTester.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Amadís de Gaula Volumes I-IV</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+
+                <p> We have used the text of the <bibl>1547 <title>Amadís</title> (Sevilla: Jacopo
+                        Cromberberger)</bibl> from which Southey translated. Images of the 1547 are
+                    from the Biblioteca Virtual de Andalucía. This text is very similar to the text
+                    of the first extant <bibl>
+                        <title>Amadís</title>, the 1508 Jorge Coci edition</bibl>, upon which most
+                    modern editions are based. Garci Rodríguez de Montalvo, a regidor or civic
+                    official of the city of Medina del Campo, edited and compiled the version of
+                    Amadís we know today from one or more medieval originals. The medieval material
+                    is concentrated in Books I-III, with occasional asides from the author. Book IV
+                    and the prologues are original to Montalvo. Only one fragment of a medieval
+                    Amadís exists, but the first texts are thought to be based in part on the
+                    Lancelot material in France and likely appeared in Spain in the mid-fourteenth
+                    century. Evidence in the form of character names and references in poetry dates
+                    to the fourteenth century. The primitive or medieval Amadís is now thought to be
+                    Castilian and not Portuguese or French. The attribution to Portuguese knight
+                    Vasco de Lobeira is now known to be apocryphal.<ptr
+                        target=" http://www.bibliotecavirtualdeandalucia.es/catalogo/catalogo_imagenes/imagen_id.cmd?idImagen=5010234"
+                    />
+                </p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>This digital critical edition seeks to reproduce the reading experience of the
+                        <bibl>1547 <title>Amadís de Gaula</title> (Sevilla: Cromberger)</bibl> with
+                    which Robert Southey worked for his translation in order to facilitate
+                    comparisons. The following modifications have been made to the 1547 print
+                    edition. <list rend="numbered">
+                        <item>We employ the letters <hi>i/e/u/y/j</hi> as in modern Spanish: i/e/u
+                            express vowel sounds and <hi>y/j</hi> express consonants. For example,
+                                <mentioned>reyna</mentioned> in the 1547 has been transcribed as
+                                <mentioned>reina</mentioned> and <mentioned>cauallero</mentioned> as
+                                <mentioned>cavallero</mentioned>. The letter <hi>y</hi> has vocalic
+                            value only at the ends of words, as in <mentioned>muy</mentioned> and
+                                <mentioned>rey</mentioned>, and as the conjunction meaning
+                                <gloss>and</gloss>.</item>
+                        <item>We preserve most of the consonant use of the 1547, including the
+                            alternation of <hi>b/v</hi> and <hi>m/n</hi> before <hi>b/p</hi> as well
+                            as the absence or presence of <hi>h</hi>. We normalize the use of
+                                <hi>qu</hi>.</item>
+                        <item>Doubled consonants, <hi>bb</hi>, <hi>cc</hi>, <hi>ff</hi>, etc. are
+                            resolved as single except where they have phonetic value.</item>
+                        <item>The single <hi>r</hi> and not <hi>rr</hi> has been transcribed after
+                            consonants: <mentioned>honrra</mentioned> becomes
+                                <mentioned>honra</mentioned>. In some cases the <hi>rr</hi> has been
+                            supplied for <hi>r</hi> for phonetic reasons:
+                                <mentioned>tiera</mentioned> becomes
+                            <mentioned>tierra</mentioned>.</item>
+                        <item>We resolve the few abbreviations in the 1547 without alerting the
+                            reader. For example, <mentioned>q̃</mentioned> has been resolved as
+                                <mentioned>que</mentioned> and <mentioned>scta</mentioned> as
+                                <mentioned>sancta</mentioned>. Any ambiguities in abbreviations are
+                            tagged.</item>
+                        <item>We transcribe the tironian sign as <mentioned>y</mentioned>.</item>
+                        <item>We use accentuation according to the norms of modern Spanish in order
+                            to guide the reader’s pronunciation and to disambiguate words.</item>
+                        <item>We use capital and lower-case letters as in modern Spanish in order to
+                            clearly mark proper names and the boundaries of sentence-like
+                            groups.</item>
+                        <item>We normalize the union and separation of words according to modern
+                            Spanish usage.</item>
+                        <item>We preserve the punctuation of the 1547 in order to facilitate
+                            clause-by-clause comparisons with Southey’s translation. We preserve the
+                            1547’s clause-like units (the space between successive punctuation
+                            marks) even though we recognize significant differences from modern
+                            usage. The 1547 uses <hi>. : /</hi> and infrequent <hi>?</hi> as
+                            punctuation, and while sentence-like groups end with a period, the
+                            period <hi>.</hi> is also used within sentence-like groups to introduce
+                            dialogue. The punctuation marks <hi>:</hi> and <hi>/</hi> appear to
+                            freely alternate. We reproduce <hi>. : /</hi> as they appear in the 1547
+                            without modernization. We have not added modern <hi>¿?</hi> to mark
+                            questions. We do not mark dialogue with em dash; rather, for this
+                            digital edition, dialogue, including questions, has been coded in the
+                            milestone element. We do not preserve the <hi>//</hi> that indicates
+                            line breaks in the middle of words. Our goal in these punctuation
+                            decisions is to render structural elements of the text at the sentence
+                            and clause level as Southey would have confronted them in order to
+                            elucidate whether the 1547 structure and punctuation influenced Southey
+                            in his own construction of sentences and clauses, which we observe
+                            differs from standard English use.</item>
+                        <item>Obvious printer errors have been tagged with the sic element.
+                            Corrections are provided based on <bibl>Juan Manuel Cacho Blecua’s
+                                critical edition (Madrid: Cátedra, 1999)</bibl>, which takes into
+                            consideration multiple sixteenth-century editions of <title>Amadís de
+                                Gaula</title> including the <bibl>Sevilla 1526</bibl> on which the
+                                <bibl>Sevilla 1547</bibl> is based.</item>
+                    </list>
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="chapter" xml:id="XXXV">
+                <!--2017-05-05 ebb: This should fire a Schematron error only in this file! Don't worry about it. The file name of our "template" file isn't going to contain a chapter number! But make sure your REAL file name matches ours. -->
+                <head>Capítulo XXVII <locus from="xlii-r" to="xlv-r"/>
+                </head>
+                <argument>
+                    <p> Amadís y Galaor superion la traición hecha y se deliberaron de provcurar si
+                        pudiessen la libertad del rey y de Oriana. </p>
+                </argument>
+                <p> Teniendo de Amadís y Galaor por el camino de Londres donde no me nos peligro de
+                    muerte avían rescebido estando en la prisión de la dueña se˜õra del castillo de
+                    granasí siendo a dos lenguas de la ciudad vieron venir ardian el enano cuanto
+                    mas el rocín lo podía llevar: Amadís que lo conoció dixo: aquel es mi enano: y
+                    no me creáis si con cuita de alguno no viene: porque nos de alguno no viene:
+                    porque nos de mandaL el enano llegó a ellos: y contóles todas las nuevas como
+                    llevavan a Oriana. Aí sancta María al dixo Amadís: y por donde van los quela
+                    llevan: cabo la villa es el mas derecho camino dixo el enano: Amadís hirió al
+                    cavallo dellas espuelas y començó de ir cuanto mas podía assí tollido que solo
+                    no podía hablar a su hermano que iva empos del: assí passaron entrabos cabe la
+                    villa de londres cuanto los cavallos los pod´ân llevar que solo no catavan por
+                    nada. sino Amadís que preguntava a los que veía por donde llevavan a Oriana/ y
+                    ellos se lo mostravana: passando Ganalín por so las siniestras donde estava la
+                    riena y otras muchas mujeres la reina lo llamo y lançóle la espada del rey: que
+                    era una dellas mejores que nunca cavallero ciñera y díxole: da esta esapda a tu
+                    señor/ y dios le ayude con ella y di a él y a Galaor que el rey se fue de aquí
+                    oí en la mañana con una donzella y no tornó/ ni sabemos donde lo llevo: Gandalín
+                    tomo la espada y fuesse cuanto mas pudo: y Amadís que no catava por donde iva
+                    con la gran cuita y pesar erróle passo de un arroyo y cuidando saltar della otra
+                    parte el cavallo que cansado era no lo pudo cumplir y cayo en el lodo: Amadís
+                    descendio y tirole por el freno y allí lo alcançó Gandalín y diolef la espada
+                    del rey y díxole las nuevas del como la reina lo dixera: y tomando el cavallo de
+                    Ganda´in tornó al camino: y Galaor se fue su passo en cuanto él cavalgó y halló
+                    un rastro por donde peresc´â aver ido cavalleros: y atendió a su hermano: y
+                    dexando la carrera acogersonse al rastro: y a poco rato encontraron unos
+                    lenandores y aquellos vieron toda la aventura del rey y de Oriana: mas no
+                    supieron quien eran: ni a ellos se osaron allegar: antes se escondieron en las
+                    matas espessas: y él uno dellos dixo. Cvalleros venís vos de londres: y porque
+                    lo preguntáis dixo Galaor: proque si ha de alla cavallero menos a donzella dixo
+                    él que nos vimos aquí una aventuras entonces les dixeron cuanto vieran de Oriana
+                    y del rey: y ellos concosieron luego que el rey fuera puso a traición y díxoles
+                    Amadís: sabéis quien eran: y quien prendió a esse rey: no dixo él: mas oí a la
+                    donzella que lo quí traxó llamar a gandes bozes a Arcalaus. Aí señor dios dixo a
+                    Amadís pelga a vos de me juntar con aquel traidor: los villanos les fueron
+                    mostrar por donde llevaron los diez cavalleros al rey:y los cinco a Oriana: y
+                    dixo el villano: el uno de los cinco era el mejor cavallero que nunca ví. Aí
+                    dixo Amadís aquel es el traidor de Arcalaus y dixo a Galaor: hermano no señor id
+                    vos empos del rey y dios quien a mi y a vos: y hieriendo el cavallo de las
+                    espuelas se fue por aquella vía: y Galaor por la que al rey llevavan a cuanto
+                    mas andar podía. Partido Amadís de su hermano cuitose tanto de andar: que cuando
+                    el sol se quería ponerle caso el cavallo tanto que de passo no lo podía sacar: y
+                    yendo con muchas congoxa vio a la mano diestra cabo una carrera un cavallo
+                    muerto/ y estava cabo el un escudero/ que tenía por la rienda un gran cavallo:
+                    Amadís se llegó a él y díxole. Amigo quien mato esse cavallero: matóle dixo el
+                    escudero un traidor que acá va/ y lleva las mans hermosads donzella del mundo
+                    forçadas: y matóle no por otra razón: sino por le preguntar quien eran: y no
+                    puedo aver quien me ayude a lo llevar de aquel: Amadís le dixo. Yo te dexaré
+                    este mi escudero que te ayude y dame esse cavallo: y prometoré de darte dos
+                    cavallos mejores por él: el escudero se lo otorgó. Amadís subió en el cavallo
+                    que era muy hermoso: y dixo a Gandalín ayuda al escudero/ y tanto que pongáis a
+                    cavallero en algun poblado tornate a este camino/ y vente empos de mí: y
+                    partiendo de allí començó de se ir por el camino cuanto podía: y hallóse ya cer
+                    del día en un valle donde vio una hermanita: y fue alla por saber si morava aí
+                    alguno/ y hallando un hermanitaño le preguntó si passaran por allí cinco
+                    cavalleros que llevavan dos donzellas. Señor dixo el hombre bueno: no passarn
+                    que los yo viesse/ mas viestes vos un castillo que allá queda: ao dixo Amadís: y
+                    porque lo dezis: porque dixo el agora se va de aquí un donzel mi sobrino/ que me
+                    dixo que alvergara aí Arcalaus el encantador: y traía unas hermosas donzellas
+                    forçadas: por dios dixo Amadís pues esse traidor busco yo: cierto dixo el
+                    hermanitaño él ha hecho mucho mal en esta tierra: y dios saqué tan mal hombre
+                    del mundo o lo emiende: mas no traéis otra ayuda: no dixo Amadís sino la de
+                    dios. Señor dixo el hermanitaño no dezis que son sinco y Arcalaus que es el
+                    mejor cavallero del mundo y mas sin pavor: sea el cuanto quisiere dixo Amadís y
+                    que él es traidor y sobervió/ y assí lo serán los que le aguardan: y por esto no
+                    les dudaré. Entonces le preguntó quien era la donzella: Amadís se lo dixo. El
+                    hermanitaño dixo aí santa maría vos ayude que tan buena señora no sea en podera
+                    de tan mal hombre/ avedes alguna cevada dixo Amadís para esta cavallo: si dixo
+                    él: y de grado vos la daré. Pues ent anto que el cavallo comía preguntóle bueno
+                    le dixo: de un cavallo que grumen se llama/ priemo cormano de Dardán aquel que
+                    en casa del rey Lisuarte fue muerto/ y cuido que por esso acogen aí los que
+                    desaman al rey Lisuarte. Agora vos encomiendo a dios dixo Amadís: y ruego vos
+                    que me aíáis mientes en vuestras oraciones: y mostradme el camino que al
+                    castillo guia: el hombre bueno se lo mostró: y Amadís anduvo tanto que llegó a
+                    él: y vio que av´â el muro alto: y las torres espessas/ y llegóse a él mas no
+                    oyó hablar a ninguno no dentro y plugo le que bien cuido que Arcalaus noría un
+                    salido: y anduvo el castillo derredor/ y vio que no avía mas de una puerta.
+                    Entonces se tiró a fuera entre unas peñas/ y apenado se del cavallo tomóle por
+                    la rienda: y estuvo quedo teniendo siempre los ojos en la puerta: como aquel que
+                    no avía sabor de dormir. A esta razón rompía el alva: y cavalgando en su cavallo
+                    tiróse mas a fuera por un valle que uvo recelo si vistro fuesse de poner
+                    sospecha que no saldrían los del castllo cuidando ser mas gente: y subio en un
+                    otero cubierto de grandes y espessas matas: entonce vio salir por la puerta del
+                    castillo un cavallero y subiase en otro oterero mas alto. E cato la tierra a
+                    todas partes después tornóse al castillo/ y no tard´ mucho que vio salir
+                    Arcalaus y sus cuanto con pañeros muy bien armados: y entre ellos la muy hermosa
+                    Oriana: y dixo aí dios agora y siempre me ayude y me guie en su guarda: en esto
+                    se llegó tanto Arcalaus que passo cabe donde él estava: y Oriana iva diziendo.
+                    Amigo señor ya nunca vos veré pues que ya se me llega la mi muerte/ a Amadís le
+                    vinieron las lágrimas a los ojos: y desendiendo del otero lo mas aína aquel pudo
+                    entro con ellos en un gran campo y dixo. Aí Arcalaus traidor no te conviene
+                    llevar tan buena señor: Oriana que la boz de su amigo conosció estremescióse
+                    toda: mas Arcalaus y los otros se dexaron a él correr/ y él a ellos: y hirió a
+                    Arcalaus que delante venía tan duramente que lo derribó en terra por sobre las
+                    ancas del cavallo: y los otros le hirieron: y dellos fallecieronde sus
+                    encuentros: y Amadís passó por ellos: y tornando muy presto su cavallo hirió a
+                    grumen el señor del castillo que era uno dellos de tal guisa que el hierro y el
+                    fuste de la lança le salió dela otra parte/ y cayó luego muerto y fue la lança
+                    quebrada: después metió mano a la espada del rey: y dexóse ir a los otros/ y
+                    metióse entre ellos tan bravo y con tanta saña que por maravilla eran los golpes
+                    que les dava: y assí le crecía la fuerça y el ardimiento e andar valiente y
+                    ligero que le parecía si el campo todo fuesse lleno de cavalleros que le no
+                    podían durar y defender ante la su buena espada: haziendo el estas maravillas
+                    que oídes dixo la donzella de Denamarcha contra Oriana. Señora acorrida sois
+                    pues aquí es el cavallero bien aventurado y mirad las maravillas que haze/
+                    Oriana dixo entonces. Aí amigo dios vos ayude y guarden que no a otro en el
+                    mundo que nos acorra ni mas valga: el escudero que la tenía en el rocín dixo:
+                    cierto yo no atenderé en mi cabeça los golpes que los yelmos y las lorigas no
+                    pueden detener/ ni resistir: y poniendola en tierra se fue huyendo cuanto mas
+                    pudo. Amadís que entre ellos andava trayendo los a su voluntad dio al uno un tal
+                    golpe en el braço que selo dierrib´ en tierra: eeste començo de huir dando bozes
+                    con la ravía de la muerte: y fue para otro que ya el yelmo de la cabeça le
+                    derribara: y hendióle hasta el pescueço. CUando el otro cavallero vio tal
+                    destricion en sus compañeros: començó de huir cuanto mas podía. Amadís que movia
+                    empos del oyó dar bozes a su señora/ y tornando presto vio a Arcalaus que ya
+                    cavalgara: y que tomando a Oriana por el braço la puesier ante si: y se iva con
+                    ella cuanto mas podía.Amadís fue empos del sin detenencia ninguna y alançolo por
+                    aquel gran campo: y alcando la espada por lo herir sufrióse de le dar gran golpe
+                    que la espada era tal que cuido que mataría a él y a su se˜õra: y diole por cima
+                    delas espaldas que no fue de toda su fuerça pero o derribóle un pedaço de la
+                    loriga y una pieça del cuerto de las espaldas: entonces dexo Arcalaus caer en
+                    tierra a Oriana por se ir mas aína: que se temía de muerte: y Amadís le dixo.Aí
+                    Arcalaus torna y veras si soy muerto como dexiste: mas él no le quiso creer:
+                    antes echo el escudo del cuello: Amadís lo alcanço antes y diole un golpe de
+                    lueñe por la cinta de la espada: y corto la loriga y en los lomos: y la punta de
+                    la espada alanço a cavallo en la ijada: y cortóle ya cuanto: assí que el cavallo
+                    con el temor començó de correr del tal forma que en poca de horase alongo gran
+                    pieça. Amadís como quiera que lo mucho desamasse y desseasse matar: no fue mas
+                    adelante por no perder a su señora/ y torno se donde ella estava: y desceniendo
+                    de su cavallo se le fue hincar de inojos elante y le hesó las manos diziendo.
+                    Agora haga dios de mi lo que quisere que nunca seño os cuide ver ella estava tan
+                    espantada que no le podía hablar: y abraçose con él: que gran miedo avía de los
+                    cavalleros muertos que cabe ella esetavan: la donzella de Denamarcha fue a tomar
+                    el cavallo de Amadís y vio la espada de Arcalaus en el suelo: y tomando la lo
+                    traxo a Amadís y dixo. Ved señor que hermosa espada: él la cató y vio ser
+                    aquella con que la echara en la mar: y se la tomó Arcalaus cuando lo encantó: y
+                    assí estando como oí sentaod Amadís cabe su señora/ que no tenéisfuerço para se
+                    levantar llegó Gandalín: que toda la noche anduviera: y avía dexado el cavallero
+                    muerto en una hermita con que gran plazer ovieron. Mas tan grande le ovo él en
+                    ver assí parado el pelito. Entonces mando Amadís que pusiesse a la donzella de
+                    Denamarcha en un cavallo de los que estavana sueltos: y él puso a Oriana en el
+                    palafrén de la donzella y movieron de all´ˆtan alegres: que mas ser no podía
+                    Amadís lleava a señora por la rienda/ y ella le iva diziendo cuando espantada
+                    iva de aquellos cavalleros muertos: que no pod´â en si tornar: mas él le dixo
+                    muy mas espantosay curel es aquella muerte que yo por vos padezco: y señora
+                    doled vos de mí: y acordaos de lo que me tenéis pormetido: que si hasta aquí me
+                    sostuve no es por al sino creyendo que no era mas en vuestra mano ni poder de me
+                    dar mas de lo que me dava: mas si de aquí adelante viendo vos señora en tanta
+                    libertad no me acorriesedes ya no hastaría ninguna cosa que la vida sostener me
+                    pudiesse: antes sería senecida conla mas raviosa desesperança que nunca persona
+                    murió: Oriana le dixo: por buena se amigo: nunca si yo puedo por mi causa vos
+                    seréis en esse peligro: yo haré lo que queréis: y vos hazed como aunque aquí
+                    yerro y pecaod parezca no lo sea ante dios. Assí anduverion tres lenguas hasta
+                    entrar en un bosque muy espesso de árboles: y cabe una villa cuanto una lengua
+                    estava. A Oriana priendio gran sueño como quien no av´â dormido ninguna cosa la
+                    noche passada y dixo. Amigo tan gran seño me viene: que me no puedo sufrir.
+                    Señor dixo el vamos a quel valle/ y dorimréis: y desuiando de la carrera se
+                    fueron al valle: donde hallaron un pqueño arroyo de agua y yuerva verde muy
+                    fresca. Allí descinido Amadís a su señora y dixo.Señora la fiesta entra muy
+                    caliente aquí dormiréis hasta que venga la fríâ. Y en tanto embiaré a Gandalín
+                    aquella vilia: y traernos ha con que refersquemos: va dixo Oriana mas quien se
+                    lo dara: dixo Amadís: darselo han sobre aquel cavallo y venir se ha a pie. Ao
+                    será assí dixo Oriana: mas lleve este mi anillo: que ya nunca nos tanto como
+                    agora valdrá: a sacandolo del dedo le dio a Gandalín. E cuando él se iva dixo
+                    passó contra Amadis. Señor quien buen tiempo tiene y lo pierde tarde lo cobra/ y
+                    esto dicho luego se fue: y Amadís entenió bien por que lo él dezía. Oriana se
+                    acostró en el mantó de la donzella; en tanto que Amadís se desarmava que bien
+                    menester lo avía: y como desarmado fue la donzella se entró a dormir en unas
+                    mantas pessas: y Amadís tornó a su señora/ y cuando assí la vio tan hermosa y en
+                    su poder: aivendole ella otorgado su voluntad: fue tan turbado de plazer y de
+                    empacho que solo mirar no la osava assí que se puede bien dezir que en aquella
+                    verda yerva encima de aquií el manto: mas por la gracta y comedimiento de Oriana
+                    qu epor la desembolutra ni osadia de Amadís fue hecha dueñ la mas hermosa
+                    donzella del mundo. Y cryeyendo con ello las sus encendidias llamas resfriar:
+                    aumentandose en muy mayor cantidad mas ardientes y con mas fuerça quedaron assí
+                    como en los anos y verdaderes amores acaescer suele/ assí estuvieron de consuno
+                    con aquellos a tos amorsosos cuales pensar y sentir puede aquel y aquella que de
+                    demejante saeta sus coraçónes heridos son hasta que el empacho de la venida de
+                    Gandalín hiazo a Amadís levantar: y llamando la donzella dieron buena orden de
+                    adereçar como comiessen quien bien les hazía menester: donde aunque los muchos
+                    servidores y la grandes haxillas de oro y de plata allí saltaron no quitaron
+                    aquel dulce y gran plazer en la comida sobre la yerva ovieron. Pues assí como
+                    oídes estavan estos dos amantes en aquella floresta con tal vida aquel nunca
+                    aplazer del uno y del otro dexada fuera si la puedieran sin empacho y gran
+                    verguença sostener. Donde los dexaremos holgar y descansar y contaremos lo qu
+                    ele auino a don Galaor en la demanda del rey. </p>
+            </div>
+        </body>
+    </text>
+</TEI>
