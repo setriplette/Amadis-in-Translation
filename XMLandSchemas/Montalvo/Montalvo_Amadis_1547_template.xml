@@ -106,13 +106,13 @@
     </teiHeader>
     <text>
         <body>
-            <div type="chapter" xml:id="M27"><!--2017-05-05 ebb: This should fire a Schematron error only in this file! Don't worry about it. The file name of our "template" file isn't going to contain a chapter number! But make sure your REAL file name matches ours. -->
+            <div type="chapter" xml:id="M36"><!--2017-05-05 ebb: This should fire a Schematron error only in this file! Don't worry about it. The file name of our "template" file isn't going to contain a chapter number! But make sure your REAL file name matches ours. -->
                 <head>Capítulo XXVII <locus from="xlii-r" to="xlv-r"/>
                 </head>
                 <argument>
-                    <p> Como Amadís se combatió con el cavallo que la donzella avía burtado estando durmiendo y de como lo venció. </p>
+                    <p> Como Don Galaor libertó al rey Lisuarte de la prisión en que traidoramente lo llevavan. </p>
                 </argument>
-                <p> . </p>
+                <p> Partido don Galaor de Amadís su hermano como ya oístes: entró en el camino por donde llevavan al rey e cuidose de andar quanto mas pudo. </p>
             </div>
         </body>
     </text>

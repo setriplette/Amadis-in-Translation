@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../out/amadis_odd.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../out/amadis_odd.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../Amadis_RomanNumeralTester.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Amadís de Gaula Volumes I-IV</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+
+                <p> We have used the text of the <bibl>1547 <title>Amadís</title> (Sevilla: Jacopo
+                        Cromberberger)</bibl> from which Southey translated. Images of the 1547 are
+                    from the Biblioteca Virtual de Andalucía. This text is very similar to the text
+                    of the first extant <bibl>
+                        <title>Amadís</title>, the 1508 Jorge Coci edition</bibl>, upon which most
+                    modern editions are based. Garci Rodríguez de Montalvo, a regidor or civic
+                    official of the city of Medina del Campo, edited and compiled the version of
+                    Amadís we know today from one or more medieval originals. The medieval material
+                    is concentrated in Books I-III, with occasional asides from the author. Book IV
+                    and the prologues are original to Montalvo. Only one fragment of a medieval
+                    Amadís exists, but the first texts are thought to be based in part on the
+                    Lancelot material in France and likely appeared in Spain in the mid-fourteenth
+                    century. Evidence in the form of character names and references in poetry dates
+                    to the fourteenth century. The primitive or medieval Amadís is now thought to be
+                    Castilian and not Portuguese or French. The attribution to Portuguese knight
+                    Vasco de Lobeira is now known to be apocryphal.<ptr
+                        target=" http://www.bibliotecavirtualdeandalucia.es/catalogo/catalogo_imagenes/imagen_id.cmd?idImagen=5010234"
+                    />
+                </p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>This digital critical edition seeks to reproduce the reading experience of the
+                        <bibl>1547 <title>Amadís de Gaula</title> (Sevilla: Cromberger)</bibl> with
+                    which Robert Southey worked for his translation in order to facilitate
+                    comparisons. The following modifications have been made to the 1547 print
+                    edition. <list rend="numbered">
+                        <item>We employ the letters <hi>i/e/u/y/j</hi> as in modern Spanish: i/e/u
+                            express vowel sounds and <hi>y/j</hi> express consonants. For example,
+                                <mentioned>reyna</mentioned> in the 1547 has been transcribed as
+                                <mentioned>reina</mentioned> and <mentioned>cauallero</mentioned> as
+                                <mentioned>cavallero</mentioned>. The letter <hi>y</hi> has vocalic
+                            value only at the ends of words, as in <mentioned>muy</mentioned> and
+                                <mentioned>rey</mentioned>, and as the conjunction meaning
+                                <gloss>and</gloss>.</item>
+                        <item>We preserve most of the consonant use of the 1547, including the
+                            alternation of <hi>b/v</hi> and <hi>m/n</hi> before <hi>b/p</hi> as well
+                            as the absence or presence of <hi>h</hi>. We normalize the use of
+                                <hi>qu</hi>.</item>
+                        <item>Doubled consonants, <hi>bb</hi>, <hi>cc</hi>, <hi>ff</hi>, etc. are
+                            resolved as single except where they have phonetic value.</item>
+                        <item>The single <hi>r</hi> and not <hi>rr</hi> has been transcribed after
+                            consonants: <mentioned>honrra</mentioned> becomes
+                                <mentioned>honra</mentioned>. In some cases the <hi>rr</hi> has been
+                            supplied for <hi>r</hi> for phonetic reasons:
+                                <mentioned>tiera</mentioned> becomes
+                            <mentioned>tierra</mentioned>.</item>
+                        <item>We resolve the few abbreviations in the 1547 without alerting the
+                            reader. For example, <mentioned>q̃</mentioned> has been resolved as
+                                <mentioned>que</mentioned> and <mentioned>scta</mentioned> as
+                                <mentioned>sancta</mentioned>. Any ambiguities in abbreviations are
+                            tagged.</item>
+                        <item>We transcribe the tironian sign as <mentioned>y</mentioned>.</item>
+                        <item>We use accentuation according to the norms of modern Spanish in order
+                            to guide the reader’s pronunciation and to disambiguate words.</item>
+                        <item>We use capital and lower-case letters as in modern Spanish in order to
+                            clearly mark proper names and the boundaries of sentence-like
+                            groups.</item>
+                        <item>We normalize the union and separation of words according to modern
+                            Spanish usage.</item>
+                        <item>We preserve the punctuation of the 1547 in order to facilitate
+                            clause-by-clause comparisons with Southey’s translation. We preserve the
+                            1547’s clause-like units (the space between successive punctuation
+                            marks) even though we recognize significant differences from modern
+                            usage. The 1547 uses <hi>. : /</hi> and infrequent <hi>?</hi> as
+                            punctuation, and while sentence-like groups end with a period, the
+                            period <hi>.</hi> is also used within sentence-like groups to introduce
+                            dialogue. The punctuation marks <hi>:</hi> and <hi>/</hi> appear to
+                            freely alternate. We reproduce <hi>. : /</hi> as they appear in the 1547
+                            without modernization. We have not added modern <hi>¿?</hi> to mark
+                            questions. We do not mark dialogue with em dash; rather, for this
+                            digital edition, dialogue, including questions, has been coded in the
+                            milestone element. We do not preserve the <hi>//</hi> that indicates
+                            line breaks in the middle of words. Our goal in these punctuation
+                            decisions is to render structural elements of the text at the sentence
+                            and clause level as Southey would have confronted them in order to
+                            elucidate whether the 1547 structure and punctuation influenced Southey
+                            in his own construction of sentences and clauses, which we observe
+                            differs from standard English use.</item>
+                        <item>Obvious printer errors have been tagged with the sic element.
+                            Corrections are provided based on <bibl>Juan Manuel Cacho Blecua’s
+                                critical edition (Madrid: Cátedra, 1999)</bibl>, which takes into
+                            consideration multiple sixteenth-century editions of <title>Amadís de
+                                Gaula</title> including the <bibl>Sevilla 1526</bibl> on which the
+                                <bibl>Sevilla 1547</bibl> is based.</item>
+                    </list>
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="chapter" xml:id="M36">
+                <!--2017-05-05 ebb: This should fire a Schematron error only in this file! Don't worry about it. The file name of our "template" file isn't going to contain a chapter number! But make sure your REAL file name matches ours. -->
+                <head>Capítulo XXVII <locus from="xlii-r" to="xlv-r"/>
+                </head>
+                <argument>
+                    <p> Como Don Galaor libertó al rey Lisuarte de la prisión en que traidoramente
+                        lo llevavan. </p>
+                </argument>
+                <p> Partido don Galaor de Amadís su hermano como ya oístes: entró en el camino por
+                    donde llevavan al rey e cuidose de andar quanto mas pudo. Como aquel que avía
+                    grande cuita de los alcançar/ y no tenía mientes en cosa que viesse sino en su
+                    rastro: y assí anduvo hasta hora de visperas que entró en un valle y halló en la
+                    huella de los cavallos donde avían parado. Entonces siguió aquel rastro quanto
+                    el cavallo lo podía llevar/ que le paresció que no podían ir luene/ mas no tardo
+                    mucho que vio ente un cavallero todo bien armado en un buen cavallo que a él
+                    salió y le dixo. Estad señor cavallero y dezidme que cuita os haze assí correr:
+                    por dios dixo Galaor dexadme de vuestra pregunta que me detengó con vos/ en que
+                    mucho mal puede venir. Para sancta María dixo el cavallero no pastaréis de aquí
+                    hasta que me la digáis: o vos combatáis conmigo: y Galaor no hazía en esto sino
+                    irse: y el cavallero del valle le dixo. Cierto cavallero vos suides aviendo
+                    hecho algun mal: y agora vos guardad: que saber no quiero. Entonces fue a él con
+                    su lança baxada: y el cavallo al mas correr: Galaor tornó/ mas echado el escudo
+                    a las espaldas quando lo sintió cerca de si sacó aína el cavallo de la carrera y
+                    apartóse/ y el cavallero no lo pudo encontrar: antes passó tan rezió por él como
+                    quien traía el cavallo valiente y holgado: y assí fue una pieça ante Galaor y
+                    tornó a él tomando la lança a sobremano: y díxole. Ay cavallo malo y covarde no
+                    te me puedes mamparar por ninguna guisa que me no digas lo que te demando o
+                    morirás: entonces fue para él muy rezió: y Galaor que el cavallo mas diestro
+                    traía guardose del encuentro y no hazía sino ir adelante quanto podía andar: el
+                    cavallero que su cavallo tan presto tener no pudo: quando tornovió que Galaor se
+                    le av´â alongado ran pieça y dixo: si me dios ayude no me vos iréis assí: y él
+                    que sabía bien tierra tomó por un ataje: y fuesse le poner en un passo: Galaor
+                    que lo vio muhco le pesó: y el cavallero le dixo. Covarde malo sin coraçón agora
+                    escoged de tres cosas qual quiserdes: o que os combatáis/ o vos torna: o me
+                    dezid lo que os preguntó. De cualquier me pesa dixo Galaor: mas no hazéis como
+                    cortes que yo no metornare: y si me combatiere no sero a mi plazer: mas si
+                    queréis saber la priessa que llevó seguid me y ver lo éis/ porque me deternía
+                    mucho en vos lo contar: y al cabo no me creeriades tanto es de mala ventura. En
+                    el nombre de Dios dixo el cavallero agora passad y digo vos que no iréis este
+                    tercero d´â sin mi Galaor pass adelante/ y el cavallero empos del/ y quando a
+                    media legua de aquel lugar fueron: vieron andar un cavallero a pie todo armado
+                    tras un cavallo de que cayera: y otro cavallero que del se part´â que se iva a
+                    mas andar: y el cavallero que iva con don Galaor conosció al cavallero derribado
+                    que era su primo cormano: y fue aína a le tomar el cavallo: y dioselo diziendo:
+                    que fue esto señor cormano: él dixo: yo iva cuidando en lo que vos sabéis/ assí
+                    que solo en mi no parava mientes/ y no cate si no quando me dio aquel cavallero
+                    que allava una lançada en el escudo tal que el cavallo inojo con migor yo cay en
+                    tierra: y el cavallo huyó.Mas luego puse mano a la espada y llamelo a la
+                    batalla: pero no quiso venir: antes me dixo que otra vez fuesse mas acordado en
+                    responder quendo me llamassen: y por la fe que devéis a Dios dixo el vayamos
+                    tras el si la aver pudieremos y veréis como me vengo: esso no puedo yo hazer
+                    dixo el cormano que este tercero día he de guardar aquel cavallero tras quien
+                    vo: y contró le quanto con el le aniniera: cierto dixo el cavallero o él es el
+                    mas covarde del mundo: o va a cometer algun gran hecho porque se assí guarda: y
+                    quiero dexar la venança de mi injuría/ por ver lo que averna deste pleyto. En
+                    este vieron ir a lueñe: que él no hazía sino andar: y los dos cormanos se fueron
+                    empos del: y a eta ora era ya cerca de la noche: Galaor entró una floresta: y
+                    con la noche perdió el rastro: y no sabía a qual parte ir. Entonces començó a
+                    pedir merced a Dios que lo guiasse en tal manera que fuesse el primero aquel
+                    aquel socorro hiziesse: y cuidando que los cavallos se desuiarían con el rey a
+                    alguna parte a dormir anduvo escuchando de un cabo y de otro por unos valles/
+                    mas no aía nada/ los dos cormanos que lo seguían cuidavan que por el camino iva:
+                    mas quanto anduvieron hasta una leguna salieron de la foresta y no le vieron/ y
+                    creyendo que se les escondiera fueron alvergar a casa de una dueña que aí cerca
+                    morava. Galaor anduvo por la floresta a todas partes: y pensó de passar la
+                    floresta pues que en ella nada hallava y sobir otro d´â en algun otero alto para
+                    mirar la tierra/ tornando al camino que ante llevava anduvo tanto que salió a
+                    loraso: y entonces vio suso por un valle un fuego pequeño: y yendo allá halló
+                    que pasavan aí herrieros: y quando assí armado lo vieron con miedo tomaron
+                    lanças y hachas y fueron contra él/ y él les dixo que se no temiessen de ningun
+                    mal: mas que les rogava que le diessen un poco cevada para el cavallo: ellos
+                    sela dieron: y allí dio de cenar a su cavallo: ellos le dixeron si comería: él
+                    dixo que no/ mas que dormiría un poco que lo despertassen ante que amaneciesse.
+                    Entonces eran ya passadas las dos partes de la noche. Galaor se echo a dormir
+                    cabe el fuego assí armado y quendo el alva començó a romper levantó se que no
+                    dormía mucho assosse gado como aquel qu avía gran cuita en no halar los que
+                    buscava: y cavalgando en su cavallo tomando sus armas los acomendo a dios y
+                    ellos a él quel su escudero no pudo tener con él: y desde allí prometió si dios
+                    le guardasse de dar a su escudero el mejor cavallo: y fuesse dereco a un otero
+                    alto: y desde allí començó de mirar la tierra a todas partes: entonces salieron
+                    los dos cormanos que en casa dela dueña alvergarán: y esto era ya de día y
+                    vieron a Galaor y conoscieron lo en el escudo y fueron contra él: mas ellos en
+                    moviendo vieron lo decendir del otero quanto su cavallo lo podía llevar: y el
+                    cavallo derribado dixo: ya nos vio y huye: cierto yo cuido que por alguna mala
+                    ventura anda assí huyendo y encubriendose: y dios no me ayude si lo alcançar
+                    puedo/ si no lo se a su daño si lo mereciere/ y vayamos tras el mas don Galaor
+                    que muy lexos de su cuidar estava/ viera y a passar los diez cavalleros un passó
+                    que a la salida de la floresta avía/ y los cinco passavan adelante y los cinco
+                    después: y en medio dellos y ivan hombres desarmados y él cuido que aquellos
+                    eran los que al rey llevavan: y fue contra ellos/ tal como aquel que ya su
+                    muerte por salvar la vida agenta ten´â ofrescida: y syendo cerca dellos/ vio al
+                    rey metiod en la cadena/ y ovo de tal pesar que no deudando la muerte se dexo
+                    correr a los cinco que delante venían/ y dixo. Aí traídores por vustro mal
+                    posistes mano en el mejor hombre del mundo: y los cinco vinieron contra él: mas
+                    él hirió al primero por los pechos en guisa que el fierro con un pedaço dela
+                    asta le salió a las espaldas: y dio con el muerto en tierra: y los otros le
+                    hirieron tan fuerte que el cavallo hizieron con el inojar: y el uno le metió la
+                    lança por entre el pecho y el escudo: y perdiendola la tomó Galaor: y fue herir
+                    al otro con ella en la cuxa de la pierna: por el cavallo: assí que el cavallo
+                    fue tollido y allí quebró la lança: y poniendo mano a la espada: vio venir todos
+                    los otros contra si: y él se metió entre ellos tan bravo que no ha hombre que de
+                    ver lo o se espantasse como pod´â sofir tantos tales golpes como le davan. Y
+                    estando en esta gran priessa peligro por ser los cavalleros muchos quiso le dios
+                    acorrer con los dos cormanos que lo seguían: que quando assí lo vieron mucho
+                    fueron maravillados de tan gran bondad de cavallero: y dixo el que empos del
+                    iva: cierto a sin razón culpavamos aquel de covarde y vamos le socorrer en tan
+                    gran priessa: quien haría aí al dixo el otro sino acorrer al mejor cavallero del
+                    mundo: y no creáis que tantos hombres acomete sino por algun gran hecho:
+                    entonces se dexaron ir a gran correr de los cavallos y fueron los herir muy
+                    bravamente como aquellos que eran muy esforçados y sabidores de aquel menester:
+                    que no avía aí tal dellos que no passasse de diez años que fuera cavallo
+                    andante: y digo os que el primero avía hombre lada sin el esgremidor/ yel otro
+                    don guilan el cuidador el buen cavallero. A esta razón avía ya menester Galaor
+                    mucho su ayuda que el yelmo avía tajado por muchos lugares y abollado: y el
+                    arnes roto por todas partes: y el cavallo llagado que cerca andava de caer mas
+                    por esoo no dexava el de hazer maravillas: y dar tan grandes golpes a los que
+                    alcava que a duro lo osava atender: y cuidava que si su cavallo no le
+                    falleciesse que lo durarían que a la sin no los amtasse: mas seyendo llegados
+                    los dos cormanos como ya oístes entonces se le parava al mejor el pleito/ que
+                    ellos se comatían también con an gran esfuerço que él se maravillo mucho: y como
+                    assí se halló mas libre/ en ser los golpes que él llevava repartidos. Entonces
+                    hazía él las cosas estrañas que pod´â herir a su voluntad: y fue tan grande la
+                    priessa que les dio y los cormanos en su ayuda/ que en poca de hora fueron todos
+                    muertos y vencidos. Quando esto vio el cormano de Arcalaus dexo se ir al rey por
+                    lo matar/ y como los que con él etavavan huyeran todos/ él decendiera del
+                    palafrén assí con su cadena a la garganta/ y tomara un escudo/ y la espada del
+                    cavallero que primero murió:y el otro que le quiso herir por cima de la cabeça/
+                    el rey alço el escudo donde recibió el golpe: y fue tal que la espada entró el
+                    brocal bien un palmo: y alanço con la punta della al rey en la cabeça/ y cortó
+                    le el cuerto y la carne hasta el huesso/ mas el rey le dio al cavallo en el
+                    rostro con la espada tal golpe que la no pudo sacar y el cavallo enarmonse y fue
+                    caer sobre el cavallero. Galaor que ya estava a pie porque el su cavallo no se
+                    podía mudar y iva por socorrer al rey/ fue para el caallero por letajar la
+                    cabeça/ y el rey dio bozes que le no matasse: los dos cormanos que fueran tras
+                    un cavallo que se les iva y lo avían muerto/ quando volverion y vieron al rey
+                    mucho fueron espantados que de su prisión no sabían ninguna cosa y decendieron
+                    aían: y tirados los yelmos fueron hincar los inojos ante él/ y él los conoció y
+                    levantando los por las manos dixo/ por dios amigos en buena a hora me acoristes:
+                    y gran mal me haze la amiga de don guilan que me lo tira de mi compañía: y por
+                    su causa pierdo yo a vos ladasin: guisa ovo gran verguença: y embermeció le el
+                    rostro: mas no que por esso dexase amar aquella su señora duqesa yde Bristoya: y
+                    ella amava a el: assí que ya overion aquel sin que de sus amores dessearon: y
+                    siempre el dque tuvo sospecha que fuera don guilan el que en su castillo entra
+                    quando allí fue Galaor como la historia os ha contado. Mas dexemos agora esto: y
+                    torne mos al rey que hizo después que libre fue. Sabed que don Galaor saco al
+                    primo de Arcalaus deso el cavallo: y quitando la cadena al rey la pueso al el: y
+                    tomaron de los cavallos de los cavalleros muertos: y el tomó uno: y galaor otro
+                    que el suyo no se movia/ y començaronse de ir camino de londres muy alegres.
+                    Landasín contró al rey todo lo que con Galaor le aocnteciera y el rey le
+                    parciava ucho/ por se assí guardar segun la demanda que lleva: y guisa assí
+                    mesmo le dixo como yendo cuidando en su amiga tan sieramente que en al parava
+                    meintes: que el cavallo le dierrbara sin nada le dezir: mucho río el rey dello
+                    diziendole/ que aunque muchas cosas avía oído que los enamorados por sus amigas
+                    hiziessen/ pero no que a este semejasee/ y con gran causa segun veo os llaman
+                    guilan el cuidador. En estas cosas yo tras de mucho plazer fueron habalado hasta
+                    llegar a a causa de Ladasin que muy cerca dende morava/ y allí llegaó a ellos el
+                    escudero de galaor y ardián el enano de Amadís que cuidava que su señor iva por
+                    aquella vía a le buscar.Galaor contó al rey de la forma ue el rey y Amadís se
+                    partieran/ y que devía embiar a londres porque los leñadore dirían las nuevas y
+                    con ellas se moveria toda la corte. Pues que Amadís dixo el reina en el socorro
+                    d mi hija no la entiendo perder: y si aquel traídor no le haze por encantamento
+                    algun engañó.Y en esto que dezis bien será que sepa la reina mi hazienda: y
+                    mandó a un escudero de ladasín que sab´â bien la tierra/ que fuesse leugo con
+                    aquellas nuevas. Pues allí alvergó el rey aquella noche. fue muy bien servido/ y
+                    otro día tornaron a su camino: y iva les contando el primo de Arcalaus como todo
+                    lo passado fuera por consejo de Barsinan señor de sansueña/ pesando ser rey de
+                    la gran bretaña: entonces se cuito el rey de andar mas que antes por le hallar
+                    aí. </p>
+            </div>
+        </body>
+    </text>
+</TEI>
