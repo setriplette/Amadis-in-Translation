@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../out/amadis_odd.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../out/amadis_odd.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../Amadis_RomanNumeralTester.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Amadís de Gaula Volumes I-IV</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+
+                <p> We have used the text of the <bibl>1547 <title>Amadís</title> (Sevilla: Jacopo
+                        Cromberberger)</bibl> from which Southey translated. Images of the 1547 are
+                    from the Biblioteca Virtual de Andalucía. This text is very similar to the text
+                    of the first extant <bibl>
+                        <title>Amadís</title>, the 1508 Jorge Coci edition</bibl>, upon which most
+                    modern editions are based. Garci Rodríguez de Montalvo, a regidor or civic
+                    official of the city of Medina del Campo, edited and compiled the version of
+                    Amadís we know today from one or more medieval originals. The medieval material
+                    is concentrated in Books I-III, with occasional asides from the author. Book IV
+                    and the prologues are original to Montalvo. Only one fragment of a medieval
+                    Amadís exists, but the first texts are thought to be based in part on the
+                    Lancelot material in France and likely appeared in Spain in the mid-fourteenth
+                    century. Evidence in the form of character names and references in poetry dates
+                    to the fourteenth century. The primitive or medieval Amadís is now thought to be
+                    Castilian and not Portuguese or French. The attribution to Portuguese knight
+                    Vasco de Lobeira is now known to be apocryphal.<ptr
+                        target=" http://www.bibliotecavirtualdeandalucia.es/catalogo/catalogo_imagenes/imagen_id.cmd?idImagen=5010234"
+                    />
+                </p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>This digital critical edition seeks to reproduce the reading experience of the
+                        <bibl>1547 <title>Amadís de Gaula</title> (Sevilla: Cromberger)</bibl> with
+                    which Robert Southey worked for his translation in order to facilitate
+                    comparisons. The following modifications have been made to the 1547 print
+                    edition. <list rend="numbered">
+                        <item>We employ the letters <hi>i/e/u/y/j</hi> as in modern Spanish: i/e/u
+                            express vowel sounds and <hi>y/j</hi> express consonants. For example,
+                                <mentioned>reyna</mentioned> in the 1547 has been transcribed as
+                                <mentioned>reina</mentioned> and <mentioned>cauallero</mentioned> as
+                                <mentioned>cavallero</mentioned>. The letter <hi>y</hi> has vocalic
+                            value only at the ends of words, as in <mentioned>muy</mentioned> and
+                                <mentioned>rey</mentioned>, and as the conjunction meaning
+                                <gloss>and</gloss>.</item>
+                        <item>We preserve most of the consonant use of the 1547, including the
+                            alternation of <hi>b/v</hi> and <hi>m/n</hi> before <hi>b/p</hi> as well
+                            as the absence or presence of <hi>h</hi>. We normalize the use of
+                                <hi>qu</hi>.</item>
+                        <item>Doubled consonants, <hi>bb</hi>, <hi>cc</hi>, <hi>ff</hi>, etc. are
+                            resolved as single except where they have phonetic value.</item>
+                        <item>The single <hi>r</hi> and not <hi>rr</hi> has been transcribed after
+                            consonants: <mentioned>honrra</mentioned> becomes
+                                <mentioned>honra</mentioned>. In some cases the <hi>rr</hi> has been
+                            supplied for <hi>r</hi> for phonetic reasons:
+                                <mentioned>tiera</mentioned> becomes
+                            <mentioned>tierra</mentioned>.</item>
+                        <item>We resolve the few abbreviations in the 1547 without alerting the
+                            reader. For example, <mentioned>q̃</mentioned> has been resolved as
+                                <mentioned>que</mentioned> and <mentioned>scta</mentioned> as
+                                <mentioned>sancta</mentioned>. Any ambiguities in abbreviations are
+                            tagged.</item>
+                        <item>We transcribe the tironian sign as <mentioned>y</mentioned>.</item>
+                        <item>We use accentuation according to the norms of modern Spanish in order
+                            to guide the reader’s pronunciation and to disambiguate words.</item>
+                        <item>We use capital and lower-case letters as in modern Spanish in order to
+                            clearly mark proper names and the boundaries of sentence-like
+                            groups.</item>
+                        <item>We normalize the union and separation of words according to modern
+                            Spanish usage.</item>
+                        <item>We preserve the punctuation of the 1547 in order to facilitate
+                            clause-by-clause comparisons with Southey’s translation. We preserve the
+                            1547’s clause-like units (the space between successive punctuation
+                            marks) even though we recognize significant differences from modern
+                            usage. The 1547 uses <hi>. : /</hi> and infrequent <hi>?</hi> as
+                            punctuation, and while sentence-like groups end with a period, the
+                            period <hi>.</hi> is also used within sentence-like groups to introduce
+                            dialogue. The punctuation marks <hi>:</hi> and <hi>/</hi> appear to
+                            freely alternate. We reproduce <hi>. : /</hi> as they appear in the 1547
+                            without modernization. We have not added modern <hi>¿?</hi> to mark
+                            questions. We do not mark dialogue with em dash; rather, for this
+                            digital edition, dialogue, including questions, has been coded in the
+                            milestone element. We do not preserve the <hi>//</hi> that indicates
+                            line breaks in the middle of words. Our goal in these punctuation
+                            decisions is to render structural elements of the text at the sentence
+                            and clause level as Southey would have confronted them in order to
+                            elucidate whether the 1547 structure and punctuation influenced Southey
+                            in his own construction of sentences and clauses, which we observe
+                            differs from standard English use.</item>
+                        <item>Obvious printer errors have been tagged with the sic element.
+                            Corrections are provided based on <bibl>Juan Manuel Cacho Blecua’s
+                                critical edition (Madrid: Cátedra, 1999)</bibl>, which takes into
+                            consideration multiple sixteenth-century editions of <title>Amadís de
+                                Gaula</title> including the <bibl>Sevilla 1526</bibl> on which the
+                                <bibl>Sevilla 1547</bibl> is based.</item>
+                    </list>
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="chapter" xml:id="M37">
+                <!--2017-05-05 ebb: This should fire a Schematron error only in this file! Don't worry about it. The file name of our "template" file isn't going to contain a chapter number! But make sure your REAL file name matches ours. -->
+                <head>Capítulo XXXVII <locus from="xlii-r" to="xlv-r"/>
+                </head>
+                <argument>
+                    <p> Como vino la nueva a la reina que era preso el Rey Lisuarte: y de como
+                        Barsinan executava su traición queriendo ser rey/ y al fin fue perdido y el
+                        rey restituido en su reino. </p>
+                </argument>
+                <p> Los leñadores que vieran como al rey le acaseciera/ llearon a la villa y
+                    dixeronlo todo. Quando esto fue sabido: la rebuelta fue muy grande a maravilla y
+                    armaronse todos los cavalleros y al mas correr de sus cavalllos salían por todas
+                    partes assí que el campo parecía ser lleno dellos. Arban el rey de Norgales
+                    estava hablando con la reina y llegaron aí sus escuderos con sus armas y
+                    cavallos: y entrando a él un donzel donde estava díxole. Señor armaos que estáis
+                    haciendo: ya no queda cavallo en la villo de la compaña del rey sino vos que
+                    todos se van al mas correr delos cavallos por la floresta. E porque dixo Arban:
+                    porque dizen dixo el donzel que llevan preso al rey diez cavallos. Aí sancta
+                    María dixo la reina/ que siempre lo he temido y cayó amortecida. Arban la dexó
+                    en poder de las dueñas y donzellas que hazían gran duelo: y fuesse a armar: y
+                    cavalgando en su cavallo oyó dezir a grandes bozes que tomavan al alaçar.Santca
+                    María dixo Arban todos somos vendidos: y tuvo que haría mal si la riena
+                    desamparasse. A esta razón era la villa tan buelta como si allí todos los del
+                    mado fuessen. Arban se paró a la parte del palacio de la reina assí armado co
+                    dozientos cavalleros de los suyos: y embi´ dos dellos que supiessen la rebulta
+                    como era: y llegando al alcaçar vieron como Barsinan era dentro con toda su
+                    compaña: y degollava y matava cuantos aver podía: y otros despenavan de los
+                    muros/ que cuando oyó la rebuelta y la prisión del rey: no paro ojo a otra cosa
+                    y los del rey no lo sospechando ivan sin recelo en el socorro:y tenía consigo
+                    seiscientos cavallos y sirivientes bien armados. Cuando Arban lo supo por su
+                    cavalleros dixo por consejo del raidor el rey espreso/ siendo ya Barsinan
+                    apoderado el alcaçar/ dexó allí gente que la guardasse y salió con la otra
+                    aprender a la reina y tomar la sila y corona del rey. Los dela villa que vieron
+                    que assí iva el reito: ivanse todos a las casas de la reina ssí armados como
+                    podían. Cuando Barsinan llegó a las casas de la reina halló aí a Arban con toda
+                    su compaña y affaz gente de la villa: y Barsinan le dixo. Arban hasta aquí
+                    fuiste el mas sesudo cavallero mancebdo que aía visto/ haz de aquí adelante como
+                    el seso no pierdas. Porque me dizes dixo Arban: porque yo se dixo él que el rey
+                    Lisuarte va en manos de quien la cabeça sin el cuerpo me embiara antes de cinco
+                    días: y en esta tierra ninguno como yo aí que pueda y deva ser rey: y assí lo
+                    seré todavía: y la tierra de Aorgales que no señorio tienes yo te la otrogo/
+                    porque eres buen cavallo y sabido: y tirase a fuera y tomaré la silla y la
+                    corona: y si al quisieres haazer de aquí te desafío: y digo te que ninguno será
+                    contra mi por me irar mi tierra/ que la cabeça no le mande cortar. Cierto dixo
+                    Arbant u dizes cosas porque yo seré contra i en cuanto viva. La primera que me
+                    consejas que sea traidor contra mi señor aviendo tan gran cuita/ y la otra que
+                    sabes que lo mataronlos que lo llevan/ en que se parece claro ser tu en la
+                    traición. Pues teniendo yo siempre en la memoria ser una delas mas preciades
+                    cosas del mundo la lealtad: y tu desechandola siendo como malo contra ella// mal
+                    nos podríamos convenvir. Como dixo Barsinan/ tu me cuidas tirar que no sea rey
+                    de Londres. Rey de Londres nunca lo será tridor dixo Arban/ y de mas en vida del
+                    mas lead rey del mundo. Barsinan dixo. Yo te cometí primero de tu por mas que a
+                    los otros: creyendo que eras el mas sabido dellos y agora me pareces mas
+                    menguado de seso: y yo te haré bien conocer tu loctura/ y ver quiero la que
+                    haras que tomar quiero la corona y la silla que lo merezco por bondades. Sobre
+                    esso haré yo tanto dixo Arban como si el rey mi señor en ella sentado fuesse.
+                    Agra lo vere dixo Brasinan/ y mando a su compaña que los fuessen servir: Arban
+                    los atendió con su compaña como aquel que muy essforçado y leal en todas las
+                    cosas era: estavav con gran saña dela que del rey su señor oyera y junataronse
+                    unos con otros muy bravamente dandose muy garndes golpes por todas parte: assí
+                    que muchos fueron muertos y llagados y la una y otra parte punatavan quanto
+                    pod´ân por se vencer y matar mas Arban hizo tanto aquel día que mas que todos
+                    los de aquella lid fue loado: que el fue defensor de todos los suyos: y no hazía
+                    sino ir adelante derribando y hiriendo/ poniendo su vida al punto de la muerte:
+                    assí anduvieron hasta la noche que se no pudieron vencer: y esto causo por ser
+                    las calles estrechas: que de otra guisa Arban se viera en peligro: y la riena
+                    fuera tomada: mas Brasisnan se acogió con su compaña al alcaçar: y halló muy
+                    gran pieça de su gente menos assí muertos como llagados: de guisa que les era
+                    much menester holgar: Arban dixo a los suyos. Señores parezca vuestra lealtad y
+                    arimiento: y no vos desamaíedes por esta mala andança: que aína en bien será
+                    cobrada. Otro si puso su compaña como se guardasse de noche. Esto hecho la reina
+                    que como muerta estavan mando llamar a Arban:: y el fue assí armado como estava/
+                    y llagando en muchas parte: y llegando donde la riena estava quitose el yelmo
+                    que roto estava: y cieronle cinoc heridas en el rostro y en la garganta y la faz
+                    llev de sangre mucho era desfigurado/ mas muy hermoso parescía a aquellas que
+                    después de dios a el renían por amparo. Cuando la reina assí lo vido gran duelo
+                    ovo del: y díxole llorando. Aí buen sobrino dios vos mantenga y os ayude/ que
+                    esta vuestra leadltad acabar podáis: por dios dezidme que será del rey y que
+                    será denos: de nos dixo él será bien si dios quesiere: y del rey oyermos buenas
+                    nuevas: y digo vos señor que no temáis de los traidores que aquí quedaron/ segun
+                    la gran lealtad de los vuestros vassallos que aquí conmigo están que os
+                    defenderán muy bien. Ay sobrino dixo la reina: y os veo tal que no podéis tomar
+                    armas y los otros no se que hagan sin vos. Señora dixo él" no toméis desso
+                    cuidado/ que en tanto que el alma tenga nunca las armas por mi se dexaran.
+                    Entonces se partió della y torno a su compaña/ assí passaron aquella noche. y
+                    Barsinan aunque su compaña halló maltrecha mucho esfuerço mostrava: y díxoles.
+                    Amigos no querio que sobre esto mas nos combatamos ni aía mas muertes/ pue que
+                    sin excesso y batalla lo acabaré como adelante veréis: y holgad agora sin ningun
+                    recelo: assí holgaron aquella nocho: y otro día de mañana arinose y cavalgó en
+                    su cavallo: se fue a un atajo que guardava el mayor domo de Arban: y como los de
+                    la barbera los vieron tomaron sus armas parase amparar: Mas Barsinan les dixo:
+                    que venia por les hablar: y que fuessen seguros hasta medio día: y el mayordomo
+                    lo fue luego dezir a su señor y a el plugo de la segurança: que tenía todos los
+                    mas de su compaña tan maltrechos que no pod´ân tomar armas: y fuesse luego con
+                    el mayordomo a su estancia: y Barsinan les dixo. Yo querio co vos seugrança de
+                    cino días si quisierdes: uiero dixo Arban: por pelito que vos no trabajéis de
+                    tomar cosa que aía en la villa: y si el rey viniere que hagamos lo cual mandaré.
+                    Todo esso otorgó yo dixo barsinan/ en tal que no aí batalla: que yo precio mi
+                    compaña y precio a vosotros que seréis mios mas aína que cuidaís: y dezir vos he
+                    como: el rey es muerto: y to he su hija y quiero la tomar por mujer/ y esto
+                    veréis antes que la regua salga. Ya dios no me ayude dixo Arban si nunca regua
+                    conmigo ovierdes siendo partcieonero en la traición que a mi señor se hizo: y
+                    agoravos id y fazedlo que pudierdes: y digo vos que antes que la noche llgasse
+                    las acometio Barsinan bien tres vezes y se tiro a fuera. </p>
+            </div>
+        </body>
+    </text>
+</TEI>
