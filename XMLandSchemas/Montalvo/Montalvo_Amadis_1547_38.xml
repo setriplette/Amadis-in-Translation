@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../out/amadis_odd.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../out/amadis_odd.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../Amadis_RomanNumeralTester.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Amadís de Gaula Volumes I-IV</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+
+                <p> We have used the text of the <bibl>1547 <title>Amadís</title> (Sevilla: Jacopo
+                        Cromberberger)</bibl> from which Southey translated. Images of the 1547 are
+                    from the Biblioteca Virtual de Andalucía. This text is very similar to the text
+                    of the first extant <bibl>
+                        <title>Amadís</title>, the 1508 Jorge Coci edition</bibl>, upon which most
+                    modern editions are based. Garci Rodríguez de Montalvo, a regidor or civic
+                    official of the city of Medina del Campo, edited and compiled the version of
+                    Amadís we know today from one or more medieval originals. The medieval material
+                    is concentrated in Books I-III, with occasional asides from the author. Book IV
+                    and the prologues are original to Montalvo. Only one fragment of a medieval
+                    Amadís exists, but the first texts are thought to be based in part on the
+                    Lancelot material in France and likely appeared in Spain in the mid-fourteenth
+                    century. Evidence in the form of character names and references in poetry dates
+                    to the fourteenth century. The primitive or medieval Amadís is now thought to be
+                    Castilian and not Portuguese or French. The attribution to Portuguese knight
+                    Vasco de Lobeira is now known to be apocryphal.<ptr
+                        target=" http://www.bibliotecavirtualdeandalucia.es/catalogo/catalogo_imagenes/imagen_id.cmd?idImagen=5010234"
+                    />
+                </p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>This digital critical edition seeks to reproduce the reading experience of the
+                        <bibl>1547 <title>Amadís de Gaula</title> (Sevilla: Cromberger)</bibl> with
+                    which Robert Southey worked for his translation in order to facilitate
+                    comparisons. The following modifications have been made to the 1547 print
+                    edition. <list rend="numbered">
+                        <item>We employ the letters <hi>i/e/u/y/j</hi> as in modern Spanish: i/e/u
+                            express vowel sounds and <hi>y/j</hi> express consonants. For example,
+                                <mentioned>reyna</mentioned> in the 1547 has been transcribed as
+                                <mentioned>reina</mentioned> and <mentioned>cauallero</mentioned> as
+                                <mentioned>cavallero</mentioned>. The letter <hi>y</hi> has vocalic
+                            value only at the ends of words, as in <mentioned>muy</mentioned> and
+                                <mentioned>rey</mentioned>, and as the conjunction meaning
+                                <gloss>and</gloss>.</item>
+                        <item>We preserve most of the consonant use of the 1547, including the
+                            alternation of <hi>b/v</hi> and <hi>m/n</hi> before <hi>b/p</hi> as well
+                            as the absence or presence of <hi>h</hi>. We normalize the use of
+                                <hi>qu</hi>.</item>
+                        <item>Doubled consonants, <hi>bb</hi>, <hi>cc</hi>, <hi>ff</hi>, etc. are
+                            resolved as single except where they have phonetic value.</item>
+                        <item>The single <hi>r</hi> and not <hi>rr</hi> has been transcribed after
+                            consonants: <mentioned>honrra</mentioned> becomes
+                                <mentioned>honra</mentioned>. In some cases the <hi>rr</hi> has been
+                            supplied for <hi>r</hi> for phonetic reasons:
+                                <mentioned>tiera</mentioned> becomes
+                            <mentioned>tierra</mentioned>.</item>
+                        <item>We resolve the few abbreviations in the 1547 without alerting the
+                            reader. For example, <mentioned>q̃</mentioned> has been resolved as
+                                <mentioned>que</mentioned> and <mentioned>scta</mentioned> as
+                                <mentioned>sancta</mentioned>. Any ambiguities in abbreviations are
+                            tagged.</item>
+                        <item>We transcribe the tironian sign as <mentioned>y</mentioned>.</item>
+                        <item>We use accentuation according to the norms of modern Spanish in order
+                            to guide the reader’s pronunciation and to disambiguate words.</item>
+                        <item>We use capital and lower-case letters as in modern Spanish in order to
+                            clearly mark proper names and the boundaries of sentence-like
+                            groups.</item>
+                        <item>We normalize the union and separation of words according to modern
+                            Spanish usage.</item>
+                        <item>We preserve the punctuation of the 1547 in order to facilitate
+                            clause-by-clause comparisons with Southey’s translation. We preserve the
+                            1547’s clause-like units (the space between successive punctuation
+                            marks) even though we recognize significant differences from modern
+                            usage. The 1547 uses <hi>. : /</hi> and infrequent <hi>?</hi> as
+                            punctuation, and while sentence-like groups end with a period, the
+                            period <hi>.</hi> is also used within sentence-like groups to introduce
+                            dialogue. The punctuation marks <hi>:</hi> and <hi>/</hi> appear to
+                            freely alternate. We reproduce <hi>. : /</hi> as they appear in the 1547
+                            without modernization. We have not added modern <hi>¿?</hi> to mark
+                            questions. We do not mark dialogue with em dash; rather, for this
+                            digital edition, dialogue, including questions, has been coded in the
+                            milestone element. We do not preserve the <hi>//</hi> that indicates
+                            line breaks in the middle of words. Our goal in these punctuation
+                            decisions is to render structural elements of the text at the sentence
+                            and clause level as Southey would have confronted them in order to
+                            elucidate whether the 1547 structure and punctuation influenced Southey
+                            in his own construction of sentences and clauses, which we observe
+                            differs from standard English use.</item>
+                        <item>Obvious printer errors have been tagged with the sic element.
+                            Corrections are provided based on <bibl>Juan Manuel Cacho Blecua’s
+                                critical edition (Madrid: Cátedra, 1999)</bibl>, which takes into
+                            consideration multiple sixteenth-century editions of <title>Amadís de
+                                Gaula</title> including the <bibl>Sevilla 1526</bibl> on which the
+                                <bibl>Sevilla 1547</bibl> is based.</item>
+                    </list>
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="chapter" xml:id="M38">
+                <!--2017-05-05 ebb: This should fire a Schematron error only in this file! Don't worry about it. The file name of our "template" file isn't going to contain a chapter number! But make sure your REAL file name matches ours. -->
+                <head>Capítulo XXVII <locus from="xlii-r" to="xlv-r"/>
+                </head>
+                <argument>
+                    <p> De como Amadís vino en socorro de la cuidad de Londres: y delo que sobrello
+                        hizo. </p>
+                </argument>
+                <p> Alvergando Amadís en el bosque con su señora Oriana/ como vos contamos
+                    preguntóle que dezía Arcalaus: ella le dixo: que no me quexasse: que el me haría
+                    antes de quinze días reina de Londres: y que me daría a Barsinan por marido: al
+                    qual él haría rey de la tierra de mi padre/ y que él sería su mayordomo mayor
+                    por le dar ami: y la cabeça de mi padre. Ay santa María dixo Amadís que gran
+                    traición de Barsinan que assí se mosrava tanto amigo del rey/ y recelo tengo que
+                    hara algun mal a la reina. Ay amigo dixo ella/ acorred vos en ello lo mejor que
+                    pudierdes. Assí me conviene dixo Amadís y mucho me pesa que yo gran plazer
+                    oviera de holgar con vos esetos quatro días en esta floresta/ s a vos sennora
+                    plugiera. Mas podría venir dello muy gran mal en la tierra: que aún será mía y
+                    vuestra si dios quisere: pues assí holgaron hasta él alva del día. Entonces se
+                    levantó Amadís y armóse muy bien: y tomando su señora por la rienda entró en el
+                    camino de Londres: y andava quanto mas podía: y halló de los cavalleros que de
+                    londres salían cinco a cinco: y diez a diez assí como ivan saliendo: y destos
+                    ser´ân mas de mil cavalleros: y él les mostrava donde fuessen a buscar al rey: y
+                    dzíales como Galaor iva adelante al socorro/ y passando por todos hallo a cinco
+                    leguas de Londres a don Grumedan al buen viejo que la reina cirar: y con el iva
+                    veinte cavalleros de su liage: que anduverion toda la noche por la floresta de
+                    una y otra parte buscando al rey: y cuando conoció a Oriana fue contra ella
+                    loorando/ y dixo. Señora ay dios que buen día con vuestra venida: mas por dios
+                    que nuevas ai del rey vuestro padre. Cierto amigo dixo ella lorando: cerca de
+                    londres me partieron del/ y plugo a dios que Amadís alcançó a los que me llavan:
+                    y fizo tanto que de su poderme tiró. Cierto dixo don grumedan alo quel no diesse
+                    cabo ninguno se trabaje de le dar: luego dixo contra Amadís. Amigo señor que ha
+                    hecho vuestro honor. Allí dixo Amadís donde partieron al rey y a su hija allí
+                    nos apartamos el y yo: y él siguió la vía del rey/ y yo la de Arcalaus que a
+                    esta señora llevava. Agora tengo mas esperança dixo don Grumedan/ pues tan bien
+                    aventurado cavallero como don Galaor va en el socorro del rey. Amadís contó a
+                    don Grumedan la gran traición de Arcalaus y de Barsinan y le dixo. Tomad a
+                    Oriana: y yo me ire a la reina lo mas presto que pudiere: que he miedo aquel
+                    aquel traidor le querría hazer mal: y vos hazed bolver los cavalleros que
+                    encontrardes: que si por gente el rey ha de ser socorido tanta va allá que
+                    muchos dellos sobran. Don Grumedan tomó a Oriana: y fuese cainino de Londres
+                    cuanto mas podía: haziendo bolver toda la gente que encontrava. Amadís se fue al
+                    mas ir de su cavallo: y entrando en la villa halló al escudero que el rey
+                    embiava: que diesse las nuevas como él era libre: y el escudero le conto en que
+                    manera avía passado. Amadís gradeció mucho a dios la buena andança de su hermano
+                    y ante que en la villa entrasse supo todo lo que barsinan avía hecho: y entró lo
+                    mas encubierto quel pudo: y cuando arban lo vió: assí él como los suyos fueron
+                    muy alegres: y tomaron grande esfuerço en si. Arban lo fue a abraçar/ y díxole.
+                    Mi buen señor que nuevas traéis: todo a vuestro plazer dixo Amadís: y vayamos
+                    luego ante la reina/ y oir las éis. Entonces entraron donde ella estava/
+                    llevando Amadís el escudero por la mano: y como la vío hinco los inojos ante
+                    ella y dixo. Señora este escudero dexa al rey libre y sano: y embió os lo dezir
+                    por él: y yo dexo a Oriana en mano de don Grmedan vuestro amo: y será agora
+                    aquien tanto ver quiero a Barisnan si pudiere: y dexando su yelmo y escudo/ y
+                    tomando otro porque no lo sonociessen dixo: Arban hazed derribar las barreras
+                    vuestras: y vengan Barsinan y su compaña y si dios qusiere hazer le hemos
+                    comprar su traición: y contóle que de Barsinan y de Arcalaus sabía. Las barreras
+                    fueron luego derribades: y Barsisan y los suyos se dexaron allí correr: creyendo
+                    lo ganar todo sin se les detener: y los de Arban los rescibieron: assí que entre
+                    ellos se començó la hazienda muy peligrosa: donde muchosheridos y muertos ovo.
+                    Barsinan iva delante/ que como los uyos eran muchos y os contrarions pocos no
+                    podían sofrir: y Barisnan punava en hazer todo cuanto podía por tomar la reina.
+                    Amadís vio la rebuelta y salió contra ellos lelvando a su cuello un escudo
+                    despintado y un yelmo oriniernto tal que muy poco valía: mas a la sin por bueno
+                    fue juzgado: y fue por la priessa adelante llevando la buena espada del rey
+                    cenida: y llegando a Barsinan diole un encuentro de la lança en el escudo tal
+                    que selo falso y él arnés: y entr´ el hierro por la carne bien meitad: y allí
+                    feu quebrada: y poniendo mano a la espada diole por cima edel yelmo y cortó del
+                    cuanto alcanço del cuero de la cabeça: assí que Barsinan fue atordido: y la
+                    espada cortó tan ligeramente que Amadís no la sintio en la mano tanto como nada/
+                    y hiriólo otra vez en el braço con que la espada tenía: y cortóle la maga/ y el
+                    braço con ella cabela mano y decedió el espada a la pierna: y cortóle bien la
+                    meitad della: y Barsinan quiso huir mas no pudo y cayó luego: y Amadís fue herir
+                    en los otros tan bravamente que al que alcançava golpe a derecho/ no avía
+                    menester maestro: assí que como lo concocieron por las maravillas que hazía
+                    dexavan le la carrera/ metiendo se unos entre otros por huir de la muerte. Arban
+                    y los suyos que lo seguián apretaron tanto que la compaña de Barsisnan quedando
+                    muchos muertos y llagados en la calle donde se cambatían/ se a cogieron al
+                    alaçar. Amadís llegó hasta las puertas y él quisiera entrar dentro sino selas
+                    cerrarán. Entoncees se tornó donde dexara a Barsinan: y muchos de la villa con
+                    él que lo aguardavan: y llegando donde Barsinan estava: vio lo que aví: tenía el
+                    huelgo: y mando le llevar al palacio… y que lo guardassen hasta que el rey
+                    viniesse/ y partido assí el debate como oís siendo los unos muertos y los otros
+                    encerrados: Amadís miró a la espada que tenía sangrienta en su mano y dixo. Aí
+                    espada en buen día nació el cavallero que vos ovo: y cierto vos sois empleada a
+                    vuestro derecho/ que siendo la mejor del mundo el mejor hombre que en el aí vos
+                    passee. Entonces se mandó desarmar y fuese a la riena: y Arban acostar a su
+                    lecho/ qe mucho menester lo avía segun era malo de sus heridas. En este comedio
+                    el rey Lisuarte que a mas andar venía la vía de Londres por hallar a Barsinan en
+                    contro muchos de sus cavalleros que en su demanda ivan: y hazía los tornar: y
+                    embiava dellos por los caminos y por los valles que hiziessen bolver todos los
+                    que hallassen que muchos eran: y los primeros que encontró fueron Agrajes y
+                    Galvanes y Solinan y Galdan: y Dinadaus y Bervas: estos seis ivan juntos
+                    haziendo gran duelo: y cuando fueron ante el rey qusieron le besar las manos con
+                    mucha alegría mas él los abraçó yd xio: mis amigos cerca estuviestes de me
+                    perder: y si falta assí lo fuera sino por Galaor y Don Guildan y la da sin ue
+                    por grande aventura se juntraron. Dinadaus le dixo. Señor toda la gente de la
+                    villa salío con las nuevas y andaran perdidos todos. Sobrino dixo el rey: tomad
+                    vos dessos cavalleros los mejores y los que mas os contentaré: y tomad este mie
+                    scudo porque con mas acamiento os obexezcan y hazed los voler este dinadaus era
+                    uno de los mejores cavalleros del linage del rey: y muy preciado entre los
+                    buenos assí de cortes como de buenas cavallerías y proezas/ y fue luego de guisa
+                    que a muchos hizo tornar. Yendo assí el rey como oís acompañado con muchos
+                    cavalleros y otras gentees y entrando el ran camino de Londres hall´ aquel su
+                    tan intimo amigo Don Grumedan que a Oriana traía: y digo vos que fue entrellos
+                    el plazer muy grande: tanto mayor cuanto mas desafuziados estava de se poder su
+                    gran tribulación remediar. Grumedan contó al rey como Amadís le fuera a la villa
+                    a la reina. En esto llegó el rey a Londres: y en su compaña mas de dos mil
+                    cavalleros: y antes que en ella entrasse le dixeron todo lo que Barsinan avía
+                    hecho: y la defensa que el rey Arban puso: y como con la venida de Amadí fuera
+                    todo despachado eniendo preso a Barsinan. Assí que ya todas las cosas de muy
+                    tristes en muy alegres eran bueltas. Llegado el rey donde la reina estava/ quien
+                    vos puede contar el plazer y alegría que con el y con Oriana la reina y todas
+                    las dueñas y donzellas overion: cierto ninguno segun tan sobrado fue. EL rey
+                    mandó cercar el alcaçar y hizo traer ante si a Barsisnan que en fin acuerado
+                    era: y el primo de Arcalaus: y hizo les contar por cual guia se ir diera aquella
+                    traición ellos se lo contaron odo que nada falto: y mandó los llevar a vista de
+                    alcaçar donde los suyos lo viessen/ y los quemassen ambos: lo qual fue leugo
+                    hecho. Los del alcaçar no teniendo provisión ni remedio/ a los cinco días
+                    vineron todos a la cerced del rey: y hizo justifica de los que le plugo/ y los
+                    otros dexó. Pero desto no se contara mas sino que por esta muerte ovo grandes
+                    tiempo entre la gran bretaña y sanseuña gran desaor/ viniendo contra este mismo
+                    rey un hijo deste Barsinan valiente cavallero con muchas compañas/ como adlante
+                    la historir contara. El rey Lisuarte siendo assossegado en sus desastres tornó a
+                    las cortes como decabo haziendo todos muy grandes fiestas/ assí de noche por la
+                    villa. como de día por el campo. En un día aí la dueña a sus hijos delante de
+                    los cuales Aamdís y Galaor prometieron a Madasima de se partir del rey Lisuarte
+                    como ya oístes. Cuando ellso la vieron fueronse a ella por la honrrar: y ella
+                    les dixo. Amigos yo soy venida aquí a lo que sabéis y dezídme que haréis en
+                    ello. Ao cumplirémos todo lo que se assento con madasima. En el nombre de dios
+                    dixo la dueña: pues oí es el plazo: vayamos luego ante el rey dixeron ellos:
+                    vavayamos dixo ella. Entonces fueron donde el rey era: y la dueña se le umilló
+                    mucho: el rey la recibio con muy buen talante. La deña dixo. Señor vine aquí por
+                    ver si ternan estos cavalleros un protimiento que hizieron a una dueña. El rey
+                    preguntó que promitimiento era. Será tal dixo ella donde cuido que pesara a vos
+                    y a los de vuestra corte que los aman. Entonces contó la dueña todo el hecho
+                    como passara con Madasima la señora de Gantasi.Cuando esto oyó el rey dixo. Aí
+                    Galaor muerto me avéis. Mas vale assí dixo Galaor que no morir: que si conocidos
+                    dueramos todo el mundo no nos diera la vida: y de esto nos vos pese señor mucho?
+                    que el remedio será presto: mas aína que cuidáis. Después dixo contra Amadís su
+                    hermano. VOs me otorgastes que haridades en esto assí como yo: Verdades es dixo
+                    él: y Galaor dixo entonces al rey alos cavalleros que delante eran por cual
+                    legaño fueron presos.El rey fue muy maravillado en oir tal traición: mas Galaor
+                    dixo que pensava que la dueña sería burlada y engañada en aquel pleito como
+                    verían: y delante de la dueña dixo contra el rey que todos lo oyeron. Señor rey
+                    o me despido de vos y de vuestra compaña : como prometido lo tengo: y assí lo
+                    cumplo: y a vos y a vuestra compaña dexo por Madasima la señora del castillo de
+                    gantasí/ que tuvo por bien de os hazer este pesar y otros cuantos pudiere/
+                    porque muchos vos desama. E Amadís hizo otro tanto Galaor dixo contra la dueña y
+                    contra sus hijos: parece os si emos cumplido la promessa: si sin falta dixo ella
+                    que todo cuanto pleiteastes qvéis cumplido. En el ombre de dios dixo Galaor:
+                    pues agora cuando os pluguiere os podéis ir y dexid a Mandasima que no peiteo
+                    tan cuerdamente como cuidava: y agora lo podéis ver. Entonces se tornó contra el
+                    rey y dixo. Señor nos avemos cumplido con Madasima lo que le prometimos no nos
+                    poniendo plazo ninguno de cuanto tiempo aviamos de ser de vos aparatados assí
+                    que buenamente nos podemos tornar cada que nuestra voluntad fuere y hagamos lo
+                    luego como lo ante estavamos u cando esto oyó el rey y los de la corte mucho
+                    fueron alegres: teniendo a los cavlleros por cuerdos. El rey dixo a la dueña por
+                    ver el pleito allí viniera. Cierto dueña segun el gran alve a estos cavalleros
+                    tan a mala verdad les fue hecho/ ellos no son obligaodos a mas ni aun a tanto
+                    como hizieron/ que muy justo es los que quieren engañar/ que queden engañadaos/
+                    y dezilde a Madasima que si mucho me desama que en la mano tenía de me hazer el
+                    mayor mal y pesar que a esta razón venir me pudiera. Mas dios que en otras
+                    partes muchas de grandes pelgros los guardo/ no quiso ue en poder de tal persona
+                    como ella padeciessen. Señor dixo la dueña dezidme si vos plugiere quen son
+                    estos cavalieros que tanto pareciados son. Dixo el rey. Amadís y Don Galaor su
+                    hermano: como dixo la dueña este es Amadís que ella tuvo en su poder si sin
+                    falta dixo el rey. A dios merced dixo la dueña porque ellos son guaridos que
+                    cierto gran mala ventura fuera si tan bueno dos hombres mueran en tal guisa: mas
+                    yo creo aquella que los tuvo queriendo supeire que ellos eran y assí le salieron
+                    de poder: que la misma muerte que les mandara dar essa se dara a si mesma.
+                    Cierto dixo el rey: esso ser´â mas justo que se hizisesse. La dueña se fue su
+                    vía. </p>
+            </div>
+        </body>
+    </text>
+</TEI>
