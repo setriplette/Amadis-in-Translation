@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../out/amadis_odd.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../out/amadis_odd.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../Amadis_RomanNumeralTester.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Amadís de Gaula Volumes I-IV</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+
+                <p> We have used the text of the <bibl>1547 <title>Amadís</title> (Sevilla: Jacopo
+                        Cromberberger)</bibl> from which Southey translated. Images of the 1547 are
+                    from the Biblioteca Virtual de Andalucía. This text is very similar to the text
+                    of the first extant <bibl>
+                        <title>Amadís</title>, the 1508 Jorge Coci edition</bibl>, upon which most
+                    modern editions are based. Garci Rodríguez de Montalvo, a regidor or civic
+                    official of the city of Medina del Campo, edited and compiled the version of
+                    Amadís we know today from one or more medieval originals. The medieval material
+                    is concentrated in Books I-III, with occasional asides from the author. Book IV
+                    and the prologues are original to Montalvo. Only one fragment of a medieval
+                    Amadís exists, but the first texts are thought to be based in part on the
+                    Lancelot material in France and likely appeared in Spain in the mid-fourteenth
+                    century. Evidence in the form of character names and references in poetry dates
+                    to the fourteenth century. The primitive or medieval Amadís is now thought to be
+                    Castilian and not Portuguese or French. The attribution to Portuguese knight
+                    Vasco de Lobeira is now known to be apocryphal.<ptr
+                        target=" http://www.bibliotecavirtualdeandalucia.es/catalogo/catalogo_imagenes/imagen_id.cmd?idImagen=5010234"
+                    />
+                </p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>This digital critical edition seeks to reproduce the reading experience of the
+                        <bibl>1547 <title>Amadís de Gaula</title> (Sevilla: Cromberger)</bibl> with
+                    which Robert Southey worked for his translation in order to facilitate
+                    comparisons. The following modifications have been made to the 1547 print
+                    edition. <list rend="numbered">
+                        <item>We employ the letters <hi>i/e/u/y/j</hi> as in modern Spanish: i/e/u
+                            express vowel sounds and <hi>y/j</hi> express consonants. For example,
+                                <mentioned>reyna</mentioned> in the 1547 has been transcribed as
+                                <mentioned>reina</mentioned> and <mentioned>cauallero</mentioned> as
+                                <mentioned>cavallero</mentioned>. The letter <hi>y</hi> has vocalic
+                            value only at the ends of words, as in <mentioned>muy</mentioned> and
+                                <mentioned>rey</mentioned>, and as the conjunction meaning
+                                <gloss>and</gloss>.</item>
+                        <item>We preserve most of the consonant use of the 1547, including the
+                            alternation of <hi>b/v</hi> and <hi>m/n</hi> before <hi>b/p</hi> as well
+                            as the absence or presence of <hi>h</hi>. We normalize the use of
+                                <hi>qu</hi>.</item>
+                        <item>Doubled consonants, <hi>bb</hi>, <hi>cc</hi>, <hi>ff</hi>, etc. are
+                            resolved as single except where they have phonetic value.</item>
+                        <item>The single <hi>r</hi> and not <hi>rr</hi> has been transcribed after
+                            consonants: <mentioned>honrra</mentioned> becomes
+                                <mentioned>honra</mentioned>. In some cases the <hi>rr</hi> has been
+                            supplied for <hi>r</hi> for phonetic reasons:
+                                <mentioned>tiera</mentioned> becomes
+                            <mentioned>tierra</mentioned>.</item>
+                        <item>We resolve the few abbreviations in the 1547 without alerting the
+                            reader. For example, <mentioned>q̃</mentioned> has been resolved as
+                                <mentioned>que</mentioned> and <mentioned>scta</mentioned> as
+                                <mentioned>sancta</mentioned>. Any ambiguities in abbreviations are
+                            tagged.</item>
+                        <item>We transcribe the tironian sign as <mentioned>y</mentioned>.</item>
+                        <item>We use accentuation according to the norms of modern Spanish in order
+                            to guide the reader’s pronunciation and to disambiguate words.</item>
+                        <item>We use capital and lower-case letters as in modern Spanish in order to
+                            clearly mark proper names and the boundaries of sentence-like
+                            groups.</item>
+                        <item>We normalize the union and separation of words according to modern
+                            Spanish usage.</item>
+                        <item>We preserve the punctuation of the 1547 in order to facilitate
+                            clause-by-clause comparisons with Southey’s translation. We preserve the
+                            1547’s clause-like units (the space between successive punctuation
+                            marks) even though we recognize significant differences from modern
+                            usage. The 1547 uses <hi>. : /</hi> and infrequent <hi>?</hi> as
+                            punctuation, and while sentence-like groups end with a period, the
+                            period <hi>.</hi> is also used within sentence-like groups to introduce
+                            dialogue. The punctuation marks <hi>:</hi> and <hi>/</hi> appear to
+                            freely alternate. We reproduce <hi>. : /</hi> as they appear in the 1547
+                            without modernization. We have not added modern <hi>¿?</hi> to mark
+                            questions. We do not mark dialogue with em dash; rather, for this
+                            digital edition, dialogue, including questions, has been coded in the
+                            milestone element. We do not preserve the <hi>//</hi> that indicates
+                            line breaks in the middle of words. Our goal in these punctuation
+                            decisions is to render structural elements of the text at the sentence
+                            and clause level as Southey would have confronted them in order to
+                            elucidate whether the 1547 structure and punctuation influenced Southey
+                            in his own construction of sentences and clauses, which we observe
+                            differs from standard English use.</item>
+                        <item>Obvious printer errors have been tagged with the sic element.
+                            Corrections are provided based on <bibl>Juan Manuel Cacho Blecua’s
+                                critical edition (Madrid: Cátedra, 1999)</bibl>, which takes into
+                            consideration multiple sixteenth-century editions of <title>Amadís de
+                                Gaula</title> including the <bibl>Sevilla 1526</bibl> on which the
+                                <bibl>Sevilla 1547</bibl> is based.</item>
+                    </list>
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="chapter" xml:id="M39">
+                <!--2017-05-05 ebb: This should fire a Schematron error only in this file! Don't worry about it. The file name of our "template" file isn't going to contain a chapter number! But make sure your REAL file name matches ours. -->
+                <head>Capítulo XXXIX <locus from="xlii-r" to="xlv-r"/>
+                </head>
+                <argument>
+                    <p> De como el rey Lisuarte tuvo cortes que duraron doze días: en que se
+                        hizieron grandes fiestas de muchos grandes que allí vinieron/ assí da mas
+                        como cavalleros: de los quales quedaron allí muchos algunos días. </p>
+                </argument>
+                <p> Mantuvo el rey allí su corte doze días en que se hizieron muchas cosas en grande
+                    acrecentamiento de su honrra y verdad: y después partieronse las cortes: y como
+                    quiera que muchas gentes della sus tierras se fueron: tantos hombres buenos con
+                    el rey que daron que maravilla era delos ver: y assí mismo la reina hizo quedar
+                    consigo muchas dueñas y donzellas de alta guisa: y el rey tomo por de su compaña
+                    a Guilan el cuidador: y a Ladasin su primo que eran muy buenos cavalleros: pero
+                    Guilan era mejor como aquel que en todo el reino de Londres no avía quien de
+                    bondad le passasse: y assí avía todas las otras bondades que a buen cavallero
+                    convenían: solamente le ponía grande entrevalo ser tan cuidador que los hombres
+                    no pod´ân gozar ni de su habla ni de su compaña: y desto era la causa amores que
+                    lo tenían en su poder/ y le hazían amar a su señora que ni a si ni a otra cosa
+                    no amava tanto/ y la que él amava era muy hermosa: y av´â nombre Brandalisa
+                    hermana del mujer del rey de Sobradisa: y casada con el duque de Bristoya. Pues
+                    assí como oís estava el rey Lisuarte en Londres contales cavallos corriendo su
+                    gran fama mas que de ninguno otro principe que en el mundo fuesse. Siendo por
+                    gran espacio de tiempo la fortuna contenta: aviendo le puesto en el gran peligro
+                    que oístes de le no tentar mas: creyendo que aquella devía bastar para hombre
+                    tan cuerdo y tan bonesto como lo era no por tanto dexaron ser su proposito mudad
+                    siendo lo del rey con codicía/ con sobervía: o con las otras muchas con las que
+                    a los reyes por no querer dellas guardarse son dañados y sus grandes famas
+                    escurecidas con mas deshonrra y abiltamiento: que si las grandes cosas passadas
+                    en su favor y gloria grande no les overan venido: porque no se deve por
+                    desaenturado ninguno contar aquel que nunca buena ventura ovo: sino aquellos que
+                    aviendo las alcançado hasta los cielos: por su mal seso: por sus vicios y
+                    pecados atraxeron a la fortuna: que con gran dolor y angustia de sus amigos se
+                    las quitasse. Estando el rey Lisuarte como óis llegó aí el duque de Bristoya al
+                    tiempo que fuera a pedimiento de Olivas emplazado por lo que ante el rey dixera:
+                    y fue del rey bien recebido y dixo. Señor vos me mandastes emplazar que
+                    paresciesse oí ante vos en vuestra corte: por lo que de mi vos dixeron: que fue
+                    muy gran mentira y desto me salvaré yo como vos y los de vuestra corte tuvierdes
+                    por derecho. Olivas se levantó y fue ante el rey: y con él se levantaron todos
+                    los mas cavallos andantes aue aí eran. El rey les dixo a que ven´ân assí todos:
+                    y don Grumendan le dixo. Señor porque el duque amenzaó a todos los cavalleros
+                    andate: y nosotros con mucha razón lo devemos estorvar. Cierto dixo el rey si
+                    assí es loca guerra tomaría: que yo tengo que en el mundo no aí tan poderoso
+                    rey/ ni tan sabido que a tal guerra pudiesse dar buena sin: mas id todos que
+                    aquí no le bsucaréis mal que el aura todo su derecho sin le del menguar ninguna
+                    cosa que yo entender pueda: y etos buenos hombres que me consejaran. Entonces se
+                    fueron todos a sus lugares sino olivas que ante el rey quedo y dixo. Señor el
+                    duque ante vos esta me mató un primo hermano que nunca le hizo ni dixo porque: y
+                    digole que es por ello alevoso: y esto le haré yo dezir: o lo mataré o echaré
+                    del campo. El duque dixo que mentía y que estaría a lo que el rey mandasse y su
+                    corte. El rey hizo quedar el pleito para otro día: pero el duque qusisiera de
+                    grado la batalla sino por dos sus sobrinos que aun no le eran llegados que los
+                    quería meter consigo si él pudiesse: que él los preciava tanto en armas que no
+                    cuidava que Olivas oviesse tales en su ayuda: que con ellos no los pudiesse
+                    ligeramente vencer. Aquel día passo: y los sobrinos del duque llegaron a la
+                    noche de que él muy alegre fue: y otro día de mañana fueron ante el rey: y
+                    Olivas reuto al duque: y él lo desmintio: y prometióle la batalla de tres por
+                    tres. Entonces se levantó Don Galvanes que a los pies del rey estava y llamó a
+                    Arajes su sobrino y dixo contra Olivas. Amigo nos os prometimos que si el duque
+                    de Bristoya que delante esta quisiesse en la batalla meter tres cavalleros que
+                    seríamos aí convos: y assí lo queremos hazer de voluntad a la batalla sea luego
+                    sin mas tardar. Los sobrinos del duque dixeron que fuesse luego la batalla. El
+                    duque miró a Agrajes y a Galvanes y conosciólos que aquellos eran a los que él
+                    hiziera sobervía en su casa: y los que le tomaron la donzella que él quería
+                    quemar: que después lo desbataron en la floresta. Y como quiera que mucho a sus
+                    sobrinos preciasse no quisiera por ninguna cosa assí aver aquella vez prometido
+                    la batalla: antes quisiera aver dado a uno de sus sobrinos para con Olivas que
+                    él entrar en ella: que mucho aquellos dos cavalleros dudava/ mas no podía al
+                    hazer. Entonces se fueron a armar unos y otros y entraron en la pleça que para
+                    las lídes semejantes limitada era: los unos por una puerta y los otros por otra:
+                    cuando Olinda que a las siniestras de la reina estava desde donde todo el campo
+                    se parecía vio al su grande amigo Agrajes que se quería combatir/ tan gran pesar
+                    ovo que el coraçón le fallec´â que los amava mas que a otra cosa que en el mundo
+                    fuesse: y con ella estava Mabilia hermana de Agrajes a quein mucho pesava por
+                    ver assí en tal peligro a su hermano y su tío don Galvanes/ y con ellas estava
+                    Oriana que de grado los quería ver bien andantes por el grande amor que Amadís
+                    les avía: y por la cirança que con el rey Languines y su mujer padres de Agrajes
+                    ella oviera. El rey que con muchos cavalleros allí estava cuando vio ser tiempo
+                    tir´se a fuera/ y los cavalleros se fueron a cometer al mas ir de los cavallos:
+                    y ninguno dellos falleció de su golpe. Agrajes y su tío se hirieron con los
+                    sobrinos del duque: y llevaronlos de las sillas por cima de las ancas de los
+                    cavallos: y los lanças fueron quebradas: y passaron por ellos muy apuestos y
+                    bien cavalgantes. Olivas fue llagod en los pechos de la lança del duque. Y el
+                    duque perdió las estriberas y cayera si no abraçara al cuello del cavallo: y
+                    passó Olivas por le mal llagado: y el duque se endereçó en la silla: y el
+                    cavallero que Agrajes derribara levantóse como mejor pudo/ y fuesse parar cabe
+                    el duque: y Agrajes se dexo correr al duque que much desmava: y començó le a dar
+                    grandes golpes por cima del yelmo: y hazíale llegar la espada a la cabeça: mas
+                    el cavallero que a pie cabe el estava que vio a su tio en tal peligro llegóse a
+                    Agrajes y hirióle el cavallo por la ijada: assí que toda la espada metio por él.
+                    Agrajes no parava en al mientes sino en tirar la vida al duque: y desto no veía
+                    nada: trayendole ya para le cortar la cabeça: cayó el cavallo con él. Don
+                    Galvanes anduvo tan embuelto con el otro cavallero que desto no veía nada.
+                    Estando Agrajes en el suelo y su cavallo: el que gelo mato heriole de grandes y
+                    muy pesados golpes: y el duque assí mesmo cuanto mas podía. Aquella hora ovieron
+                    del todos sus amigos muy gran duelo: y Amadís sobre todos que quisiera el
+                    degrado estar allí como su primo estava/ y el que no lo estuviera: por que tenía
+                    tan gran temor de ver lo morir segun en la priessa en que estava: y las tres
+                    donzellas que ya oístes que a las siniestras estavan mirando: ovieron tan gran
+                    pesar en le assí ver: que a pocas no se matavan con sus propias manos. Mas
+                    Olinda su señora la avía sobre todas: aquella que en verle hazer tan grandes
+                    ansias a los que la miravan hazía dolor. Agrajes como ligero muy presto del
+                    cavallo saliera: como aquel que ninguno de mas bivo y esforçado conracón que él
+                    se hallaría en gran parte: y defendía se delos dos cavallerso muy bien cn la
+                    buena espada de Amadís que tenía en su ano: y dava con ella grandes golpes.
+                    Galaor que con gran cuita lo mirava: dixo passo con gran duelo. Aí dios aque
+                    entiende Olivas que no acorre onde vee que es menester: cierto mas le valiera
+                    nunca traer armas: que de assí con ellas a tal hora errar. Esto dezía don Galaor
+                    no sabiendo de la gran cuita en que Olivas era: que él estava tan mal llagdo y
+                    tanta sangre se le iva que maravilla er acomo se pod´â tener solamente en la
+                    silla: y cuando assí vido a Agrajes sospiro con gran dolor como aquel que aunque
+                    la fuerça le faltava no le fallescía el coraçón/ y alçando los ojos al cielo
+                    dixo. Aí dios señor a vos plega de me dar lugar antes que el anima del mi cuerpo
+                    slida sea como yo acorra a aquel mi buen amigo. Entonces endereçando la cabeça
+                    del cavallo contra ellos metio mano a la espada muy flacamente: y fue hrir al
+                    duque y el duque a él/ y dieronse grandes golpes con las espadas/ que la saña le
+                    hizo a Olivas cobrar en algo de mas fuerça: tanto que al parecer de todos no se
+                    combatía peor que el duque. Agrajes quedó solo con el otro cavallero: y
+                    combatían se ambos tan bien de pie/ que a durose hallaría quien mejor lo
+                    hiziesse: mas Agrajes se aquexava mucho por le vencer como aquel que veía
+                    mirarle su señora/ y no quería erra un solo punto/ no solamente delo que devía
+                    hazer/mas aun mas adelante. Tanto que a sus amigos desava dello/ temiendo que al
+                    estrecho la fuerça y el aliento le fallescería: pero esta manera ovo el siempre
+                    en todos los lugares onde se combatió ser siempre mas acometedor que otro
+                    cavallero/ y cuitarse mucho por dar sin a sus batallas: y si de tal fuerça como
+                    de esfuerço fuera pujara a ser uno de los mejores cavaleros del mundo: y assí lo
+                    era muy bueno y preciado: y tantos golpes dio por cima del yelmo al cavallero
+                    que cortando selo por cuatro lugares de muy poco valor y menos defensa se lo
+                    hizo: el cavallero no entendía sino en se guardar y ampara a su cabeça con el
+                    escudo/ que el yelmo de poca defensa era: y el arnés mucho menos: que
+                    desguarnecido en muchas partes era/ y la carne cortada por mas de diez lugares
+                    que la sangre salía. Cuando el cavallero tan mal parado se vio fuesse cuanto
+                    pudo donde el duque estava por ver si en el hallar´â algun reparó: mas Agrajes
+                    que lo siguiendo iva alcançolo ante que allá llegasse: y diole por cima del
+                    yelmo que en muchas partes era roto tal golpe que el espada entró por él y por
+                    la cabeça: tanto que al tirar della dio conel cavallero tendido a sus pies
+                    bolliendo con la ravía de la muerte. Agrajes mirólo que el duque y Olivas
+                    hazían: y vio que Olivas avía perdido tanta sangre: que se maravillo como podía
+                    vivir. y fue lo socorrer/ mas antes que llgasse cayó del cavallo amortescido y
+                    el duque que no viera como Agrajes matara a su sobrino: y vio a don Galvanes
+                    combatir se con el otro dexo lo assí en el suelo: y fue cuanto pudo contra
+                    Galvanes/ y dava le grandes golpes. Agrajes cavalgó presto en el cavallo de
+                    Olivas teniendo le por muerto: y fue a socorrer a su tío que maltrecho estava: y
+                    como llegó dio al sobrino del duque tal golpe/ que le cortó él tiracol del
+                    escudo y el arnés: y hizo entrar la espada por la carne hasta los huessos. El
+                    cavallero torno el rostro por ver quien lo hería y diole Agrajes otro golpe
+                    sobre el visal del yelmo: y quedo en el la espada que no la pudo sacar: y
+                    tirando por ella hizo le quebrar los lazos del yelmo: assí que fue tras la
+                    espada y cayóle en tierra. Galvanes que gran saña del tenía/ dexando al duque
+                    tornó por le dar en la cabeça en descubierto/ mas el otro cubrió se con el
+                    escudo que aquel menester avía mucho usado: pero como el tiracol avía cortado:
+                    no pudo tanto hazer que la cabeça no satistiziesse a la saña de don Galvanes
+                    quedando casi desfecha: y a su amo en el suelo muerto: en tanto adnava Agrajes
+                    con el duque muy buelto a grandes golpes: mas como su tío llegó tomaron le en
+                    medio: y començaron lo a herir por todas partes que mucho lo desamavan
+                    portalmente: y cuando se vio assí entre ellos/ començó de huir cuanto su cavallo
+                    lo podía llevar: mas aquellos que lo desamava lo seguiando quiera que el iva
+                    cuanto mas podía: cuando assí lo vieron todos los cavalleros andantes/ muchos
+                    fueron alegres: y don Guilan mas que todos/ cuidando que muerto el duque mas a
+                    su guisa podría el gozar de la su señora que la amava sobre todas las cosas: el
+                    cavallo de Galvanes era mal llagado/ y con la gran quexa que le dio por alcançar
+                    al duque no lo podiendo y aendurar cayó con él: assí que Galvanes fue muy
+                    quebrantado. Agrajes fue al duque y diole con la espada en el brocal del escudo.
+                    E la espada descendió al pescueço bien un palmo/ y al tirar della oviera lo
+                    llevado de la silla/ mas el duque tiró preso el escudo del cuello/ y dexolo en
+                    la espada/ y torno a huir cuanto mas pudo. Agrajes sacó la espada del escudo y
+                    fue empos del/ mas el duque bolvía a él y dava le un golpe o dos: torava a huir
+                    como de cabo Agrajes lo denostava y seguíale y diole un tal golpe or cuna del
+                    ombro siniestro que lo cortó el arnés y la carne/ y los huellos/ hasta cerca de
+                    los costados/ assí quel braço quedo colgado del cuerpo. Y el duque dio una gran
+                    voz/ y Agrajes tomo lo por el yelmo y tiró lo contra si: y como ya estava
+                    tolldio ligeramente lo batió del cavallo quedandole un pie en la estribera que
+                    no lo pudo sacar: y como el cavallo huyó llev´le rastrando por el campo a todas
+                    partes hasta que salió del cuanto una echadura de arco. E cuando a él llegaron
+                    hallaron lo muerto: y la cabeça hecha pieças de las manos y pies del cavallo.
+                    Agrajes se tornó donde era su tío/ y descendiendo del cavallo le dixo. Señor com
+                    os va: sobrino señor dixo él/ bien dendito dios: y muchos me pesa de Olivas
+                    nuestro amigo que entiendo que es muerto. Por buena se yo lo creo dixo Agrajes y
+                    gran pesar tengo dello. Entonces fue Galvanes donde él era y Agrajes a echar su
+                    era del campo los sobrinos del duque/ y todas sus armas/ y tornose donde Olivas
+                    hazía y hallóse acordava ya cuanto y abría los ojos a gran asan pidiendo
+                    consessión. Galvanes miró la herida y dixo. Buen amigo no temáis de la muerte/
+                    que esta llaga no es un lugar peligroso/ y tanto que la sangre aíáis restañada
+                    seréis guarido. Aí señor dixo Olivas falleceme el coraçón y los miembros del
+                    cuerpo: y ya otra vez fui mal llagado mas nunca tan desfallecido me sentí/ la
+                    mengua de la sangre dixo galvanes lo haze que se vos ha ido mucha: mas de al no
+                    vos temáis. Entonces lo desarmaron y dandole el aire fue mas esforcado: y la
+                    sangre conmençó a cesar luego. El rey embió por un lecho en que llevassen a
+                    Olivas. y mandó los el rey salir del campo: y llevaron a Olivas a su posada: y
+                    allí vinieron maestros por le curar/ y viendo la herida aunque grande era:
+                    dixeronle que lo guarecerían con ayuda de dios/ y plugo dello mucho al rey y a
+                    otros muchos. Assí quedo en guarda delos maestros: y al duque y a sus sobrinos
+                    llevaron sus parientes a su tierra: y de aquella batalla ovo Agrajes gran prezo
+                    de muy buen cavallero: y fue su bondad mas conscida que ante era. La reina embió
+                    por Blansida mujer del duque que para ella se viniesse/ y le haría toda honrra:
+                    y que traxesse cosigo aldeva su sobrina. Desto plugo mucho a don Guilan: y fue
+                    por ellas don Grumedan amo de la reina: y ante de un mes tras traxó la corte/
+                    donde muy bien recebidas fueron. Pues assí como oís estava el rey y la reina en
+                    Londres con muhas gentes de cavalleros y dueñas y donzellas: donde antes de
+                    medio anno sabiendose por las otras tierras la grande alteza en que la
+                    cavallería allí era matendia/ tantos cavalleros allí fueron que por maravilla
+                    era tenido: a los quales el rey honrava y hazía mucho bien: esperando con ellos
+                    no solamente defeder y ampara auqel su gran reino de la grande bretaña mas con
+                    quitar otros que los teimpos passados a quel subjectos y tributarios fueron: que
+                    por falta de los reyes ante passados siendo folxos y escassos: sojuzgados a
+                    vicos y deleytes a la razón no le eran: assí como lo hizo. </p>
+            </div>
+        </body>
+    </text>
+</TEI>
