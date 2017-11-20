@@ -106,13 +106,43 @@
     </teiHeader>
     <text>
         <body>
-            <div type="chapter" xml:id="M37"><!--2017-05-05 ebb: This should fire a Schematron error only in this file! Don't worry about it. The file name of our "template" file isn't going to contain a chapter number! But make sure your REAL file name matches ours. -->
-                <head>Capítulo XXVII <locus from="xlii-r" to="xlv-r"/>
+            <div type="chapter" xml:id="40">
+                <!--2017-05-05 ebb: This should fire a Schematron error only in this file! Don't worry about it. The file name of our "template" file isn't going to contain a chapter number! But make sure your REAL file name matches ours. -->
+                <head>Capítulo XL <locus from="xlii-r" to="xlv-r"/>
                 </head>
                 <argument>
-                    <p> De como Amadís vino en socorro de la cuidad de Londres: y delo que sobrello hizo. </p>
+                    <p> Cmo la batalla passó que Amadís avía prometido bazer con Abiseos y sus dos
+                        hijos/ en el castillo de Grovenenesa a la hermosa niña Brisolanja/ en
+                        vengança de la muerte del rey su padre. </p>
                 </argument>
-                <p> Partido don Galaor de Amadís su hermano como ya oístes: entró en el camino por donde llevavan al rey e cuidose de andar quanto mas pudo. </p>
+                <p> Contando vos ha la bistorie como estando Amadís en el castillo de gronvenesa
+                    donde prometió a Briolanja la niña hermosa de le dar venagnça de un año/
+                    trayendo consigo otros dos cavalleros para se combatir con abiseos/ y con sus
+                    dos hijos: y como a la partida la hermosa niña le dio una pesada que por amor
+                    suyo traxesse: viendo que la avía meneter: por que la suya aubrara defendiendose
+                    de los cavalleros: que a mala verdad en aquel castillo matarlo qusieron: de que
+                    después de Dios fue librado por los leones que esta hermosa niña mandara soltar:
+                    aviendo gran piedad que tan buen cavallero tan malamente muerto fuesse: y como
+                    esta misma espada quebranto Amad´ˆ en otro castillo de la amiga de Angriote
+                    destravas combatiendose con un cavallero que Gasinan av´â bombre: y por su
+                    mandado fueron guardadas aquellas tres pieças de la espada por Gandalín su
+                    escudero. E gora vos será dicho: como aquella batalla passó: y que peligro tan
+                    grande le sobrevino por causa de aquella espada quebrada/ no por su culpa del
+                    mas del su enano ardian que con gran ignorancia erro pesando que se señor Amadís
+                    amava aquella niña hermosa Briolanja de leal amor viendo comoo por su cavallero
+                    se le ofreciera estando el delante: y quer´â por ella tomara aquella batalla.
+                    Agora sabed que estando Amadís en la corte del rey Lisuarte viendo muchas vezes
+                    aquella muy hermosa Orian su señora: que era el cabo y sin de todos sus mortales
+                    desseos/ vino le en la memoria esta batalla que de hazer avía: como el plazo se
+                    acercava. Assí que le convinó porque su promessa en falta no fuesse de con mucha
+                    fición en se partir de la su presencia tan grave le fuesse como apartar el
+                    coraçón de sus carnes: haziendole saber lo que en aquel castillo passara: y la
+                    Birolanja: y le restituir en su reino que con tan gran riaición quitadole
+                    estava: mas ella con muchas lágrimas y cuita de su coraçón: como que adevinava
+                    la desuetura que por causa della a entrabos vino: considerando la falta en que
+                    el caya si le destuviesse se la otrogó. E Amadís tomando assí mesmo llevando
+                    consigo a su hermano don Galaor y Agrjaes su primo: armados en sus cavallos
+                    fueron en el camino puestos: y aviendo </p>
             </div>
         </body>
     </text>

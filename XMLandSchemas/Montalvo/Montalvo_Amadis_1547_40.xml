@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../out/amadis_odd.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../out/amadis_odd.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../Amadis_RomanNumeralTester.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Amadís de Gaula Volumes I-IV</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+
+                <p> We have used the text of the <bibl>1547 <title>Amadís</title> (Sevilla: Jacopo
+                        Cromberberger)</bibl> from which Southey translated. Images of the 1547 are
+                    from the Biblioteca Virtual de Andalucía. This text is very similar to the text
+                    of the first extant <bibl>
+                        <title>Amadís</title>, the 1508 Jorge Coci edition</bibl>, upon which most
+                    modern editions are based. Garci Rodríguez de Montalvo, a regidor or civic
+                    official of the city of Medina del Campo, edited and compiled the version of
+                    Amadís we know today from one or more medieval originals. The medieval material
+                    is concentrated in Books I-III, with occasional asides from the author. Book IV
+                    and the prologues are original to Montalvo. Only one fragment of a medieval
+                    Amadís exists, but the first texts are thought to be based in part on the
+                    Lancelot material in France and likely appeared in Spain in the mid-fourteenth
+                    century. Evidence in the form of character names and references in poetry dates
+                    to the fourteenth century. The primitive or medieval Amadís is now thought to be
+                    Castilian and not Portuguese or French. The attribution to Portuguese knight
+                    Vasco de Lobeira is now known to be apocryphal.<ptr
+                        target=" http://www.bibliotecavirtualdeandalucia.es/catalogo/catalogo_imagenes/imagen_id.cmd?idImagen=5010234"
+                    />
+                </p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>This digital critical edition seeks to reproduce the reading experience of the
+                        <bibl>1547 <title>Amadís de Gaula</title> (Sevilla: Cromberger)</bibl> with
+                    which Robert Southey worked for his translation in order to facilitate
+                    comparisons. The following modifications have been made to the 1547 print
+                    edition. <list rend="numbered">
+                        <item>We employ the letters <hi>i/e/u/y/j</hi> as in modern Spanish: i/e/u
+                            express vowel sounds and <hi>y/j</hi> express consonants. For example,
+                                <mentioned>reyna</mentioned> in the 1547 has been transcribed as
+                                <mentioned>reina</mentioned> and <mentioned>cauallero</mentioned> as
+                                <mentioned>cavallero</mentioned>. The letter <hi>y</hi> has vocalic
+                            value only at the ends of words, as in <mentioned>muy</mentioned> and
+                                <mentioned>rey</mentioned>, and as the conjunction meaning
+                                <gloss>and</gloss>.</item>
+                        <item>We preserve most of the consonant use of the 1547, including the
+                            alternation of <hi>b/v</hi> and <hi>m/n</hi> before <hi>b/p</hi> as well
+                            as the absence or presence of <hi>h</hi>. We normalize the use of
+                                <hi>qu</hi>.</item>
+                        <item>Doubled consonants, <hi>bb</hi>, <hi>cc</hi>, <hi>ff</hi>, etc. are
+                            resolved as single except where they have phonetic value.</item>
+                        <item>The single <hi>r</hi> and not <hi>rr</hi> has been transcribed after
+                            consonants: <mentioned>honrra</mentioned> becomes
+                                <mentioned>honra</mentioned>. In some cases the <hi>rr</hi> has been
+                            supplied for <hi>r</hi> for phonetic reasons:
+                                <mentioned>tiera</mentioned> becomes
+                            <mentioned>tierra</mentioned>.</item>
+                        <item>We resolve the few abbreviations in the 1547 without alerting the
+                            reader. For example, <mentioned>q̃</mentioned> has been resolved as
+                                <mentioned>que</mentioned> and <mentioned>scta</mentioned> as
+                                <mentioned>sancta</mentioned>. Any ambiguities in abbreviations are
+                            tagged.</item>
+                        <item>We transcribe the tironian sign as <mentioned>y</mentioned>.</item>
+                        <item>We use accentuation according to the norms of modern Spanish in order
+                            to guide the reader’s pronunciation and to disambiguate words.</item>
+                        <item>We use capital and lower-case letters as in modern Spanish in order to
+                            clearly mark proper names and the boundaries of sentence-like
+                            groups.</item>
+                        <item>We normalize the union and separation of words according to modern
+                            Spanish usage.</item>
+                        <item>We preserve the punctuation of the 1547 in order to facilitate
+                            clause-by-clause comparisons with Southey’s translation. We preserve the
+                            1547’s clause-like units (the space between successive punctuation
+                            marks) even though we recognize significant differences from modern
+                            usage. The 1547 uses <hi>. : /</hi> and infrequent <hi>?</hi> as
+                            punctuation, and while sentence-like groups end with a period, the
+                            period <hi>.</hi> is also used within sentence-like groups to introduce
+                            dialogue. The punctuation marks <hi>:</hi> and <hi>/</hi> appear to
+                            freely alternate. We reproduce <hi>. : /</hi> as they appear in the 1547
+                            without modernization. We have not added modern <hi>¿?</hi> to mark
+                            questions. We do not mark dialogue with em dash; rather, for this
+                            digital edition, dialogue, including questions, has been coded in the
+                            milestone element. We do not preserve the <hi>//</hi> that indicates
+                            line breaks in the middle of words. Our goal in these punctuation
+                            decisions is to render structural elements of the text at the sentence
+                            and clause level as Southey would have confronted them in order to
+                            elucidate whether the 1547 structure and punctuation influenced Southey
+                            in his own construction of sentences and clauses, which we observe
+                            differs from standard English use.</item>
+                        <item>Obvious printer errors have been tagged with the sic element.
+                            Corrections are provided based on <bibl>Juan Manuel Cacho Blecua’s
+                                critical edition (Madrid: Cátedra, 1999)</bibl>, which takes into
+                            consideration multiple sixteenth-century editions of <title>Amadís de
+                                Gaula</title> including the <bibl>Sevilla 1526</bibl> on which the
+                                <bibl>Sevilla 1547</bibl> is based.</item>
+                    </list>
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="chapter" xml:id="40">
+                <!--2017-05-05 ebb: This should fire a Schematron error only in this file! Don't worry about it. The file name of our "template" file isn't going to contain a chapter number! But make sure your REAL file name matches ours. -->
+                <head>Capítulo XL <locus from="xlii-r" to="xlv-r"/>
+                </head>
+                <argument>
+                    <p> Cmo la batalla passó que Amadís avía prometido bazer con Abiseos y sus dos
+                        hijos/ en el castillo de Grovenenesa a la hermosa niña Brisolanja/ en
+                        vengança de la muerte del rey su padre. </p>
+                </argument>
+                <p> Contando vos ha la bistorie como estando Amadís en el castillo de gronvenesa
+                    donde prometió a Briolanja la niña hermosa de le dar venagnça de un año/
+                    trayendo consigo otros dos cavalleros para se combatir con abiseos/ y con sus
+                    dos hijos: y como a la partida la hermosa niña le dio una pesada que por amor
+                    suyo traxesse: viendo que la avía meneter: por que la suya aubrara defendiendose
+                    de los cavalleros: que a mala verdad en aquel castillo matarlo qusieron: de que
+                    después de Dios fue librado por los leones que esta hermosa niña mandara soltar:
+                    aviendo gran piedad que tan buen cavallero tan malamente muerto fuesse: y como
+                    esta misma espada quebranto Amad´ˆ en otro castillo de la amiga de Angriote
+                    destravas combatiendose con un cavallero que Gasinan av´â bombre: y por su
+                    mandado fueron guardadas aquellas tres pieças de la espada por Gandalín su
+                    escudero. E gora vos será dicho: como aquella batalla passó: y que peligro tan
+                    grande le sobrevino por causa de aquella espada quebrada/ no por su culpa del
+                    mas del su enano ardian que con gran ignorancia erro pesando que se señor Amadís
+                    amava aquella niña hermosa Briolanja de leal amor viendo comoo por su cavallero
+                    se le ofreciera estando el delante: y quer´â por ella tomara aquella batalla.
+                    Agora sabed que estando Amadís en la corte del rey Lisuarte viendo muchas vezes
+                    aquella muy hermosa Orian su señora: que era el cabo y sin de todos sus mortales
+                    desseos/ vino le en la memoria esta batalla que de hazer avía: como el plazo se
+                    acercava. Assí que le convinó porque su promessa en falta no fuesse de con mucha
+                    fición en se partir de la su presencia tan grave le fuesse como apartar el
+                    coraçón de sus carnes: haziendole saber lo que en aquel castillo passara: y la
+                    Birolanja: y le restituir en su reino que con tan gran riaición quitadole
+                    estava: mas ella con muchas lágrimas y cuita de su coraçón: como que adevinava
+                    la desuetura que por causa della a entrabos vino: considerando la falta en que
+                    el caya si le destuviesse se la otrogó. E Amadís tomando assí mesmo llevando
+                    consigo a su hermano don Galaor y Agrjaes su primo: armados en sus cavallos
+                    fueron en el camino puestos: y aviendo cuanto media legua andado: Amadís
+                    preguntó a Gandalín si traía las tres pieças de la espada que la niña hermosa le
+                    diera: y él dixo quel las traería pues que cosa ninguna llevava que empacho le
+                    diesse: esto fue ocasión por donde siendo sin culpa Amadís y su señora Oriana y
+                    el enano que on ignorancia lo hizo fueron entranbos llegados al punto de la
+                    muerte: queriendo les mostrar tan cruel fortuna que a ninguno perdona los
+                    xaropes amargos que aquella dulçura de sus grandes amores en si ocultos y en
+                    cerrados ten´â como agora oiréis: que el Enano llegaod a la posada de Amadís y
+                    tomando las pieças de la espada: y poniendolas en la halda de su tavardo
+                    passando cabe los palacios de la reina desde las siniestras se oyó llamar: y
+                    alçando la cabeza vio a Oriana y o Mabilia que le prguntaron: como no saliera
+                    con su señor. Si salí dixo él: mas ove de tornar por esto que aquel llevo. Que
+                    es esso dixo Oriana: el gelo mostró. Ella dixo: para que quiere tu señor la
+                    espada quebrada: para que dixo él. Porque la parciava mas por aquella que gela
+                    dio que las mejores dos sanas que le dar podrían: y quien es essa dixo ella:
+                    aquella misma dixo el enano por quien la batalla va a hazer: que aunque vos sois
+                    hija del mejor rey del mundo y contanta hermosura: querriades aver ganado lo que
+                    ella gano ams que cuanta tierra vuestro padre tiene. Y que ganancia dixo ella
+                    fue essa que tan preciada es: por ventura gano a tu señor: si dixo él: que ella
+                    ha su coraçón enteramente: y él quedó por su cavallo para la servir: y dando del
+                    açote a su rocín lo mas presto que pudo alcanço a su señor: que bien su cuidado
+                    de sin culpa desto su pesamiento estava: oido esto por Oriana viniendole en la
+                    memoria que con tan gran afición la licencia Amadís le demandara dando entera se
+                    aquello que el enano dixo la su color tenida como de muerte/ y el coraçón
+                    ardiendo con saña palabras muy airadas contra aquel que en al no pesava sino en
+                    su servico començó a dezir torciendo las manos una con otra cerrando se le el
+                    coraçón de tal forma que lágrima ninguna de sus oos salir pudo: las que les en
+                    si recogidas muy mas curel y con mas turable rigor le hizieron que con mucha
+                    razón a quella fuerte Medea se pudiera comprar: cuando al su muy amado marido/
+                    con otra a ella desechando casado vio. Pues a esta los consuelos de aquella muy
+                    cuerda Mabilia dados por el camino de la razón y verdad: ni los de la su
+                    donzella de Denamarcha ninguna cosa aprovecharon: mas a ella sugiendo lo que el
+                    apassionado seso delas mujeres acostumbra por la mayor parte sguir/ cayó en un
+                    yerro tan grade. que para su reparación la miserciodria del señor muy alto fue
+                    bien menster. Y el enano se fue por su camino hasta tanto que alcanço a Amadís y
+                    sus compañeros/ que anduvieron por su camino passó hasta que le enano llegó.
+                    Entonces se apressuraron algo mas: pero ni Amadís preguntó al enano ninguna cosa
+                    del passado/ ni el ennao se lo dixo: sino tanto que le mostró las pieças de la
+                    espada. Pues yendo assí como oídes a poco rato encontraron una donzella: y
+                    después de se aver saludado díxoles. Caval eros donde vaís: por este camino
+                    dixeron ellos. pues yo vos consejo dixo ella que sta carrera dexéis. Porque dixo
+                    Amadís: porque ha bien quinze días dixo ella que no fue por aí cavallero andante
+                    que no fuesse muerto a llagado. Y de quien reciben esse daño dixo Amadís: de un
+                    cavallo dixo ella que es el mejor en armas de cuantos yo sé.Donzella dixo
+                    Agrajes mostrarnos le heís esse cavallo. Él se os mostrar dixo ella/ tanto que
+                    en la foresta entréis. entonces continuando su camino y la donzella que los
+                    seguían miravan a todas partes: y de que nada no vieron tenían por vanas las
+                    palabras della mas a la salida de la floresta vieron un cavallero grande todo
+                    armado/ en un hermoso cavallo ruano/ y cabe élun escudeto que cuatro lanças le
+                    tenía: y él tenía otra en la mano: y como los vio mando al escudero: y no
+                    supieron que/ pero él acostó las lanças a un árbol: y fuesse para ellos y
+                    díxoles. Señores aquel cavallo os manda dezir que él ovo de guardar esta
+                    floresta de todos los cavallos andantes quinze días/ en la que les le auino
+                    también: que siempre ha seido vencedor/ y con sabor de justar ha estado mas de
+                    su plazo día y medio: y agora queriendose ir vio que veniades: y manda vos dezir
+                    que si os plaze con el justar que lo hará/ con tanto que la batalla de las
+                    espadas cesse: porque en ella ha he mucho mal sin su plazer: y no lo querría
+                    haer de aquí adelante si escusar lo pudiesse. En tanto que el escudero esto les
+                    dezía Agrajes tomo su yelmo y echo el escudo al cuello y dixo dezilde que se
+                    guarde que la justa por mi no fallecera. El cavallero cuando lo vido venir vino
+                    contra él y al mas correr de sus cavallos se hirieron con las lanças en los
+                    escudos: assí que luego fueron quebradas: y Agrajes fue entierra tan ligeramente
+                    que él fue maravillado: de que ovo gran verguença y su cavallo suelto. Galaor
+                    que esto vio tomo su armas por lo vengar: y el cavallero de la florsta tomando
+                    otra lança fue para él: y ninguno falto de s encuentro: mas quebradas las
+                    lanças: y justandose los cavallos y ellos con los escudos uno con otro: fue el
+                    golpe tan grande que el cavallo de galaor que mas flaco y casado de uotro era en
+                    tierra fue con su señor/ y quedando Galaor en el suelo el cavallo suyo por el
+                    campo. Amadís que lo mirava començose desantiguar/ y tomando sus armas dixo.
+                    Agora se puede loar el cavallero contra los dos mejores del mundo y fue contra
+                    él: yc omo llegó a dDon Galaor hallólo a pie con la espada en la mano llamdno al
+                    cavallo a la batalla a cavallo y el de pie: y el cavallero se reía del/ y díxole
+                    Amadís. Hermano no os aquéis que ante no s dixo que no cambatiría con espada.
+                    Después dixo al cavallero que se guardasse. Entonces se dexaron ir el uno al
+                    otro/ y las lanças bolaron por el aire en pieças/ mas juntaron los escudos y
+                    yelmos uno con otro que fue maravilla. y Madís y suc avallo fueron en tierra: al
+                    cavallo se le quebr´ la peslada: y el cavallero de la floresta cayó mas llevó
+                    las riendas en la mano/ y cavalgó luego muy ligeramente. Amadís le dixo. Cavallo
+                    otra vez os conviene justar/ que la justa no es partida pues ambos caímos: no me
+                    plaze agora de mas justar dixo el cavallero: haréis me sin razón dixo Amadís.
+                    Adereçaldo vos dixo él cuando pudierdes: que yo segun los que os mande dezir no
+                    soy mas obligado. Entonces movió de allí por la floresta cuanto su cavallo pudo
+                    llevar. Amadís y sus compañeros que assí vieron ir quedando ellos en el suelo o
+                    tuvieronse por muy escarnidos: y no podían pensar quien fuesse el cavallo que
+                    con tanta gloria dellos se avía partido. Amadís cacalgo en el cavallo de
+                    Gandalín: y dixo a los otros. Cavalgad y venid empos de mi que mucho me pesara
+                    sino supiere es aquel cavallero. Cierto dixo la donzella pensar vos delo hallar
+                    por afan que en ello pusisessesses esta sería lamayor locura del mundo: que si
+                    todos los que en casa del rey Lisuarte son lo buscasen lo hallarían en este año
+                    sino oviesse quien los guiasse. Cuando ellos oyeron esto mucho les peso: y
+                    Galaor que mas saña que los otros tenía dixo a la donzella. Amiga señora por
+                    ventura sabeis vos quien este cavallero sea: donde se podría aver: si dello
+                    alguna cosa se dixo ella no vos lo diré: que no quiero enojar atan buen hombre.
+                    Aí donzella dixo alaor por la se que a dios devéis: a la cosa del mundo que mas
+                    amaís dezid nos lo que dello sabéis ao cale de me conjuar dixo ella: que no
+                    escobrriía sin algo hazienda de tan buen cavallero. Agora demandad dixo Amadís
+                    lo que os pluguiere que podamos cumplir/ y otorar se vos ha con tanto que lo
+                    digáis. Yo vos lo diré dixo ella por pleito que me digáis quien sois: y me deís
+                    sendos dones cuando vos los pidiere/ ellos que gran cuita avian de lo saber
+                    otorgaronlo. En el nombre de dios dxo ella: pues agora me dezid vuestros bombre:
+                    y ellos se lo dixeron. Cuando ella oyó aque quel era Amadís hizo se muy alegre:
+                    diróle a dios merced que yo vos demando: y porque dixo él: señor dixo ella saber
+                    lo béis cuando fuere tiempo: mas dezid me si vos miembrea la batlala que
+                    promestistes a la hija del rey sobradisa cuando vos soccorió con los leones y
+                    vos libro de la muerte aiembra dixo él: y agora voy allá. Pues como queréis dixo
+                    ella seguir este cavallo que no es tan ligero de hallar como cuidadís: y vuestro
+                    plazo se allega: señor vuestro don Galaor dize verdad y ir vos y Agrajes al
+                    plazo que pusistes y yo iré buscar al cavallero con eta Donzella que jamás seré
+                    alegre hasta que lo halle/ y si ser pudiere tornar me a vos al tiempo de la
+                    batalla. En el nombre de dios dixo Amadís: pues assí vos plaze assí sea: y
+                    dixeron a la donzella. Aora nos dezid el nombre del cavallo y donde lo hallará
+                    donGalaor. Su nombre dixo ella no vos lo podría dezir que lo no se: aunque fue
+                    ya tal razón que le aguarde un mes: le vi hazer tanto en armas que a duro lo
+                    podría creer quien lo no viesse: mas donde el irá guisaré yo aquí en conmigo ir
+                    quisiere: con esto soy yo satisfecho dixo don Galaor: pues seguid me dixo ella
+                    ellos se encomendaron a dios. Amadís y Agrajes se fueron su camino como ante
+                    ivan y don Galaor en guia de la donzella: Amadís y Agrajes partiods de don
+                    Galaor andveron tanto por sus jornadas que llegaron al castillo de rocín que así
+                    avía nombre donde la hermosa niña y goernesa estavan: y antes que allí llegassen
+                    hizieron en el camino muchas buenas cavllerías: cuando la dueña supo o allí
+                    venía Amadís fue muy alegre: y vino contra él con muchas dueñas y donzellas
+                    trayendo por la mano la niña hermosa: y cuando se viero recibieronse muy bien:
+                    mas digo vos que está razón la niña era tan hermosa que no parescía sino una
+                    estrella luziente. Assí que ellos fuerond e la ver muy maravillados que en
+                    comparación delo que al presente parescía no ere tanto como nada cuando Amadís
+                    primero la vio: y dxio contra Agrajes: que os parece desta donzella: Pareceme
+                    que si dios ovo sabor dela hazer hermosa que muy por entero se cumpli su
+                    voluntad/ la dueña dixo. Señor Amadís Briolanja vos agradesce mucho vuestra
+                    venida: y lo que della se seguirá con ayuda de dios: y desarmaos y holgaréis.
+                    Entonces los llevaron a una camara: donde dexando sus armas con sendos mantos
+                    cubiertos se tornaron a la sala donde los atendián: y en tanto que hablavan con
+                    grovenesa Briolanja a Amadís mirava y paraescía le él mas hermoso cavallero que
+                    nunca viera: y por cierto tal era en aquel tiempo que no pasava de viente años:
+                    y tenía el rostro machado de las armas mas considerando qun bien empleadas en el
+                    aquellas manzillas eran/ y como con ellas tan limpia y clara la su fama y honrra
+                    hazía/ mucho en su apostura y hermosura acrescentrava: y en tal punto aquesta
+                    vista le causo que de auqllea muy hermosa donzella que con tanta afición le
+                    mirava tan amado fue: que por muy largos y grandes tiempos nunca de su coraçón
+                    la su membrança partar pudo: donde por muy gran fuerça de amor costrendia no lo
+                    pudiendo su animo sufrir ni resistir aviendo cobrado su rieno como adleante se
+                    dirá fue por parte della requierendo que del y due su persona sin ninguna
+                    entrevalo señor podían ser: mas esto sabido por Amadís dio enteramente a concoer
+                    que las anguistas y dolores con las muchas lágrimas derramadas por su señora
+                    Oriana no sin gran lealtad las passava/ aun que el señor infante don Afonso de
+                    portugal/ aviendo piedad desta hermosa donzella/ de otra guisa lo mandase poner:
+                    en esto izo lo que su merced fue mas no aquello que en efecto de sus amores se
+                    escirvia: de otra guisa se cuentan estos amores que con razón a ello dar se
+                    deve: que seyendo Birolanja en su reino restituida holgando en el con Amadís y
+                    Agrajes que llegados estavan permaneciendo ella en sus amores vyedo como en
+                    Amadís: ninguna via para que sus mortales desseos efecto oviessen/ habalndo a
+                    parte en gran secreto con la donzella a quien Amadís y Galaor y Agrajes los
+                    endos dondes prometieron porque guiasse a Don Galaor a la parte donde el
+                    cavallero de la floreta avía ido: que ya de quel camino toranar/ y descuriendo
+                    le su hazienda demando le co muchas lágrimas mas remedio para quella su tan
+                    crecida passión y la donzella doliendo se de quella su señora demando a Amadís
+                    para cuplimeitnode su promessa de que una torre no saliesse hasta aver un hijo o
+                    hija en Brisolanja: y a ella le fue dado: y que Amadís por no slatar su palabra
+                    en la torese pudiera/ como le fue demandado: donde no quierendo aver juntamiento
+                    con Brioloaja periendo el comer y dormir en gra peligro de su vida fue puesto.
+                    Lo cual sabido o en la corte del rey Lisuarte como en tal estrecho estava: su
+                    señora Oriana porque se no perdiesse le embieo mandar que hiziesse lo que la
+                    donzella le emandava: y que Amadís con esta licencia considerando no poder otra
+                    guisa de allí salir ni ser palabra verdadera que tomando su amiga aquella
+                    hermosa reina ovo en ella un hijo de una hija de un vientre: pero ni lo uno ni
+                    lo otro no fue assí/ sino que Briolanja veyendo como Amadís de todo en en todo
+                    se iva a la muerte en la torre donde estava: que mando a la donzella quel don le
+                    quitasse se pleito que de allí no fuesse hasta ser tornado don Galaor: quierendo
+                    que sus ojos gozassen de aquello que lo no viendo en gran tiniebla y escuridad
+                    quedava/ que era tener ante si aquel tan hermoso y famoso cavallo. Esto lleva
+                    mas razón de ser creido/ porque eta hermosa reina casada fue con don Galaor como
+                    el quarto libro lo cuenta. Pues en aquel castillo estuvieron Amadís y Agrajes
+                    como oís esperando que las cosas necessarias al camino para ir a hazer la
+                    batalla se aparejassen.</p>
+            </div>
+        </body>
+    </text>
+</TEI>
